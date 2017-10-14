@@ -12,5 +12,5 @@
     IBOutlet UILabel *address;
     IBOutlet UIImageView *housePic;
 }
-@porperty Property *property;
+@property Property *property;
 @end
