@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecieveCommunicationsList : UIViewController {
+@interface RecieveCommunicationsList : UIViewController <UITableViewDelegate,UITableViewDataSource>{
     
     IBOutlet UILabel *notificatations;
     IBOutlet UITableView *notificationTable;
