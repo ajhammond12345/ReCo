@@ -10,4 +10,6 @@
 
 @interface ExpenseCells : UITableViewCell
 
+-(void)updateCell;
+
 @end

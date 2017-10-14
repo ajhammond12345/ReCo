@@ -10,6 +10,10 @@
 
 @implementation ContractCells
 
+-(void) updateCell {
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

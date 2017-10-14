@@ -10,4 +10,7 @@
 
 @interface NotificationCells : UITableViewCell
 
+
+-(void)updateCell;
+
 @end
