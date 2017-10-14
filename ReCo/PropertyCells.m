@@ -11,7 +11,9 @@
 @implementation PropertyCells
 
 -(void)updateCell {
-    
+    address.text = property.address;
+    rent.text = property.rent;
+    housePic = property.image;
 }
 
 - (void)awakeFromNib {

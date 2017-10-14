@@ -16,6 +16,7 @@
 		7039BA7E1F91DCDB00A529A1 /* ReCoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA7D1F91DCDB00A529A1 /* ReCoTests.m */; };
 		7039BA891F91DCDC00A529A1 /* ReCoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA881F91DCDC00A529A1 /* ReCoUITests.m */; };
 		704933FA1F9298FE004DA1A0 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 704933F91F9298FE004DA1A0 /* Utility.m */; };
+		70C23B2C1F92D7250048A608 /* Picture.m in Sources */ = {isa = PBXBuildFile; fileRef = 70C23B2B1F92D7250048A608 /* Picture.m */; };
 		70F9C91E1F92A8510031FF0B /* Property.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C91D1F92A8510031FF0B /* Property.m */; };
 		70F9C9211F92A8690031FF0B /* Contract.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9201F92A8690031FF0B /* Contract.m */; };
 		70F9C9241F92A87E0031FF0B /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9231F92A87E0031FF0B /* Expense.m */; };
@@ -81,6 +82,8 @@
 		7039BA8A1F91DCDC00A529A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		704933F81F9298FE004DA1A0 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
 		704933F91F9298FE004DA1A0 /* Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
+		70C23B2A1F92D7250048A608 /* Picture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Picture.h; sourceTree = "<group>"; };
+		70C23B2B1F92D7250048A608 /* Picture.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Picture.m; sourceTree = "<group>"; };
 		70F9C91C1F92A8510031FF0B /* Property.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Property.h; sourceTree = "<group>"; };
 		70F9C91D1F92A8510031FF0B /* Property.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Property.m; sourceTree = "<group>"; };
 		70F9C91F1F92A8690031FF0B /* Contract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Contract.h; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				70F9C9231F92A87E0031FF0B /* Expense.m */,
 				70F9C9251F92A8950031FF0B /* Notification.h */,
 				70F9C9261F92A8950031FF0B /* Notification.m */,
+				70C23B2A1F92D7250048A608 /* Picture.h */,
+				70C23B2B1F92D7250048A608 /* Picture.m */,
 				7039BA671F91DCDB00A529A1 /* ViewController.h */,
 				7039BA681F91DCDB00A529A1 /* ViewController.m */,
 				704933F81F9298FE004DA1A0 /* Utility.h */,
@@ -405,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70C23B2C1F92D7250048A608 /* Picture.m in Sources */,
 				E60DE86C1F92131C0006C5FC /* RenterPayment.m in Sources */,
 				E60DE8631F9212E00006C5FC /* RenterHome.m in Sources */,
 				E661EE171F9263F9004626DE /* PropertyCells.m in Sources */,

@@ -18,8 +18,16 @@
     IBOutlet UITextField *inputRent;
     IBOutlet UIButton *back;
     IBOutlet UIButton *addProperty;
-
+    IBOutlet UIImageView *houseAvatar;
+    
 }
+
+@property NSString *address;
+@property int rentInCents;
+@property UIImage *avatar;
+@property NSMutableArray *beforePhotos;
+
+@property bool isAvatarImage;
 
 -(IBAction)back:(id)sender;
 -(IBAction)addProperty:(id)sender;

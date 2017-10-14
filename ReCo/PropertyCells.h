@@ -10,6 +10,7 @@
 #import "Property.h"
 @interface PropertyCells : UITableViewCell {
     IBOutlet UILabel *address;
+    IBOutlet UILabel *rent;
     IBOutlet UIImageView *housePic;
 }
 @property Property *property;
