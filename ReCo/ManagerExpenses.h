@@ -15,6 +15,7 @@
     IBOutlet UITableView *expensesTable;
 }
 
+@property NSArray *expenseList;
 -(void)toSpecificPropertyExpenses;
 -(IBAction)back:(id)sender;
 

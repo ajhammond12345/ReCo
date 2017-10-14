@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Expense.h"
 
 @interface ExpenseCells : UITableViewCell
 
+Expense *expense;
 -(void)updateCell;
 
 @end
