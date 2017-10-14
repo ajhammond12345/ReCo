@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PastContracts : UIViewController
+@interface PastContracts : UIViewController {
+    
+    IBOutlet UILabel *pastContracts;
+    IBOutlet UITableView *contractTable;
+    IBOutlet UITableViewCell *cell;
+    IBOutlet UIButton *back;
+    
+
+}
 
 @end

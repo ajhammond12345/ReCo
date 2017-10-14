@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManagerHome : UIViewController
-
+@interface ManagerHome : UIViewController{
+    
+    IBOutlet UIButton *addProperty;
+    IBOutlet UILabel *managerHome;
+    IBOutlet UITableView *propertyTable;
+    IBOutlet UITableViewCell *cell;
+    IBOutlet UIButton *expenses;
+    IBOutlet UIButton *contracts;
+}
 @end

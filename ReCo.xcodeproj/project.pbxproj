@@ -30,6 +30,7 @@
 		E60DE8691F92130B0006C5FC /* RenterNoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8681F92130B0006C5FC /* RenterNoProperty.m */; };
 		E60DE86C1F92131C0006C5FC /* RenterPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE86B1F92131C0006C5FC /* RenterPayment.m */; };
 		E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE86E1F92132C0006C5FC /* RenterActualPayments.m */; };
+		E60DE8781F922B250006C5FC /* ManagerExpenses.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8771F922B250006C5FC /* ManagerExpenses.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,8 @@
 		E60DE86B1F92131C0006C5FC /* RenterPayment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterPayment.m; sourceTree = "<group>"; };
 		E60DE86D1F92132C0006C5FC /* RenterActualPayments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenterActualPayments.h; sourceTree = "<group>"; };
 		E60DE86E1F92132C0006C5FC /* RenterActualPayments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterActualPayments.m; sourceTree = "<group>"; };
+		E60DE8761F922B250006C5FC /* ManagerExpenses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerExpenses.h; sourceTree = "<group>"; };
+		E60DE8771F922B250006C5FC /* ManagerExpenses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerExpenses.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -163,6 +166,8 @@
 				E60DE8551F9212840006C5FC /* RecieveCommunicationsList.h */,
 				E60DE85B1F9212B70006C5FC /* PropertyContract.h */,
 				E60DE85C1F9212B70006C5FC /* PropertyContract.m */,
+				E60DE8761F922B250006C5FC /* ManagerExpenses.h */,
+				E60DE8771F922B250006C5FC /* ManagerExpenses.m */,
 				E60DE8561F9212840006C5FC /* RecieveCommunicationsList.m */,
 				E60DE8581F9212930006C5FC /* RecieveCommunicationsSpecific.h */,
 				E60DE85E1F9212C80006C5FC /* PastContracts.h */,
@@ -352,6 +357,7 @@
 				E60DE84B1F9211FA0006C5FC /* CreateProperty.m in Sources */,
 				E60DE8541F9212730006C5FC /* SendCommunication.m in Sources */,
 				E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */,
+				E60DE8781F922B250006C5FC /* ManagerExpenses.m in Sources */,
 				E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */,
 				E60DE85D1F9212B70006C5FC /* PropertyContract.m in Sources */,
 				E60DE8451F9211830006C5FC /* Initial.m in Sources */,

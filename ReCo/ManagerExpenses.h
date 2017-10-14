@@ -1,5 +1,5 @@
 //
-//  SendCommunication.h
+//  ManagerExpenses.h
 //  ReCo
 //
 //  Created by Abhinav Tirath on 10/14/17.
@@ -8,12 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SendCommunication : UIViewController {
+@interface ManagerExpenses : UIViewController {
     
-    IBOutlet UITextField *title;
-    IBOutlet UITextField *body;
-    IBOutlet UIButton *send;
     IBOutlet UIButton *back;
+    IBOutlet UILabel *expenses;
+    IBOutlet UITableView *expensesTable;
+    IBOutlet UITableViewCell *cell;
 
 
 }

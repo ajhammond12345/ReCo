@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RenterNoProperty : UIViewController
+@interface RenterNoProperty : UIViewController {
+    IBOutlet UILabel *houseLabel;
+    IBOutlet UITextField *houseField;
+    IBOutlet UIButton *uploadContractButton;
+    IBOutlet UILabel *uploadContractLabel;
+}
 
 @end
+
+
