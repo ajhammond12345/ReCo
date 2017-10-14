@@ -14,8 +14,9 @@
     IBOutlet UITableView *contractTable;
     IBOutlet UITableViewCell *cell;
     IBOutlet UIButton *back;
-    
-
 }
+
+-(IBAction)back:(id)sender;
+@property bool isManager;
 
 @end

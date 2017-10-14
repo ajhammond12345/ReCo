@@ -14,7 +14,10 @@
     IBOutlet UIButton *currentContract;
     IBOutlet UIButton *pastContracts;
     IBOutlet UIButton *back;
-
 }
+
+-(IBAction)currentContract:(id)sender;
+-(IBAction)pastContracts:(id)sender;
+-(IBAction)back:(id)sender;
 
 @end

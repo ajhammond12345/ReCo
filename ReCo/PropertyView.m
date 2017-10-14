@@ -14,6 +14,24 @@
 
 @implementation PropertyView
 
+
+-(IBAction)renterIssues:(id)sender{
+    [self performSegueWithIdentifier:@"toReceiveCommunicationsList" sender:self];
+}
+-(IBAction)contract:(id)sender{
+    [self performSegueWithIdentifier:@"toPropertyContract" sender:self];
+}
+-(IBAction)messageRenter:(id)sender{
+    [self performSegueWithIdentifier:@"toSendCommunication" sender:self];
+}
+-(IBAction)expenses:(id)sender{
+    [self performSegueWithIdentifier:@"SpecificPropertyExpenses" sender:self];
+}
+-(IBAction)back:(id)sender{
+    [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

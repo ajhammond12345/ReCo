@@ -16,7 +16,11 @@
 
 
 -(IBAction)back:(id)sender{
-    [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+    if(_isManager){
+        [self performSegueWithIdentifier:@"toPropertyView" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+    }
 }
 
 /* Still need to send a parameter with this */

@@ -15,4 +15,9 @@
     IBOutlet UIButton *back;
 }
 
+-(IBAction)resolve:(id)sender;
+-(IBAction)back:(id)sender;
+
+
+
 @end

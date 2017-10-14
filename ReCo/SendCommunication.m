@@ -14,6 +14,17 @@
 
 @implementation SendCommunication
 
+-(IBAction)back:(id)sender{
+    if (_isManager){
+        [self performSegueWithIdentifier:@"toPropertyView" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+    }
+}
+-(IBAction)send:(id)sender{
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

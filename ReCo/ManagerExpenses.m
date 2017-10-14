@@ -14,6 +14,13 @@
 
 @implementation ManagerExpenses
 
+-(void)toSpecificPropertyExpenses{
+    [self performSegueWithIdentifier:@"toSpecificPropertyExpenses" sender:self];
+}
+-(IBAction)back:(id)sender{
+    [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

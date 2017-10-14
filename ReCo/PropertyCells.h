@@ -1,5 +1,5 @@
 //
-//  Initial.h
+//  PropertyCells.h
 //  ReCo
 //
 //  Created by Abhinav Tirath on 10/14/17.
@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface Initial : UIViewController {
-    
+@interface PropertyCells : UITableViewCell {
+    IBOutlet UILabel *
 }
-
-@property bool firstTime;
-@property bool isManager;
 
 @end

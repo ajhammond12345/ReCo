@@ -10,7 +10,7 @@
 
 @interface RenterHome : UIViewController {
     
-    IBOutlet UIImage *home;
+    IBOutlet UIImageView *home;
     IBOutlet UILabel *addressLabel;
     IBOutlet UILabel *UserAddress;
     IBOutlet UIButton *notifications;

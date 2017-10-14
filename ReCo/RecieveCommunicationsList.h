@@ -18,6 +18,8 @@
 }
 
 -(IBAction)back:(id)sender;
+-(void)toReceiveCommunicationsSpecific;
+@property bool isManager;
 
 
 @end

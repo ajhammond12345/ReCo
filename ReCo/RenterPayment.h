@@ -18,8 +18,6 @@
     IBOutlet UILabel *userPaid;
     IBOutlet UIButton *payNow;
     IBOutlet UIButton *back;
-
-
 }
 
 -(IBAction)payNow:(id)sender;

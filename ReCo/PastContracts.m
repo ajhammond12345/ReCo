@@ -14,6 +14,15 @@
 
 @implementation PastContracts
 
+-(IBAction)back:(id)sender;{
+    if (_isManager) {
+        [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"toRenterPaperwork" sender:self];
+    }
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

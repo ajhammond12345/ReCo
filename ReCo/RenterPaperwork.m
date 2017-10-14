@@ -14,6 +14,16 @@
 
 @implementation RenterPaperwork
 
+-(IBAction)currentContract:(id)sender{
+    [self performSegueWithIdentifier:@"toPropertyContract" sender:self];
+}
+-(IBAction)pastContracts:(id)sender{
+    [self performSegueWithIdentifier:@"toPastContracts" sender:self];
+}
+-(IBAction)back:(id)sender{
+    [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

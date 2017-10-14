@@ -17,6 +17,11 @@
     IBOutlet UILabel *rent;
     IBOutlet UITextField *inputRent;
     IBOutlet UIButton *back;
+    IBOutlet UIButton *addProperty;
+
 }
+
+-(IBAction)back:(id)sender;
+-(IBAction)addProperty:(id)sender;
 
 @end

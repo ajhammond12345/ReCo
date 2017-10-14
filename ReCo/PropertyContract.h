@@ -10,6 +10,9 @@
 
 @interface PropertyContract : UIViewController {
     
+    IBOutlet UIButton back;
 }
+
+@property bool isManager;
 
 @end

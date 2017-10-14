@@ -14,8 +14,9 @@
     IBOutlet UILabel *expenses;
     IBOutlet UITableView *expensesTable;
     IBOutlet UITableViewCell *cell;
-
-
 }
+
+-(void)toSpecificPropertyExpenses;
+-(IBAction)back:(id)sender;
 
 @end

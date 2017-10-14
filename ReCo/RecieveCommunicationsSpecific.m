@@ -14,6 +14,16 @@
 
 @implementation RecieveCommunicationsSpecific
 
+
+-(IBAction)back:(id)sender {
+    [self performSegueWithIdentifier:@"toReceiveCommunicationsList" sender:self];
+}
+/*Need to pass parameter with this too!*/
+-(IBAction)resolve:(id)sender {
+    [self performSegueWithIdentifier:@"toReceiveCommunicationsList" sender:self];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

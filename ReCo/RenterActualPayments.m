@@ -14,6 +14,10 @@
 
 @implementation RenterActualPayments
 
+-(IBAction)back:(id)sender{
+    [self performSegueWithIdentifier:@"toRenterActualPayments" sender:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

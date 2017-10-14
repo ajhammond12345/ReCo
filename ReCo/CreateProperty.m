@@ -14,6 +14,17 @@
 
 @implementation CreateProperty
 
+
+-(IBAction)back:(id)sender{
+    [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+
+}
+-(IBAction)addProperty:(id)sender{
+    [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

@@ -9,7 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface RenterActualPayments : UIViewController {
-    
+    IBOutlet UIButton *back;
 }
+
+-(IBAction)back:(id)sender;
 
 @end

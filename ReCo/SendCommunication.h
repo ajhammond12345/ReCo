@@ -14,8 +14,11 @@
     IBOutlet UITextField *body;
     IBOutlet UIButton *send;
     IBOutlet UIButton *back;
-
-
 }
+
+@property bool isManager;
+-(IBAction)back:(id)sender;
+-(IBAction)send:(id)sender;
+
 
 @end

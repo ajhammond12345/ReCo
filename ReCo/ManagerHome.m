@@ -14,6 +14,21 @@
 
 @implementation ManagerHome
 
+-(IBAction)addProperty:(id)sender{
+    [self performSegueWithIdentifier:@"toCreateProperty" sender:self];
+
+}
+-(void)toPropertyView {
+    [self performSegueWithIdentifier:@"toPropertyView" sender:self];
+
+}
+-(IBAction)expenses:(id)sender{
+    [self performSegueWithIdentifier:@"toManagerExpenses" sender:self];
+}
+-(IBAction)contracts:(id)sender{
+    [self performSegueWithIdentifier:@"toPastContracts" sender:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

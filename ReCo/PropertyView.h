@@ -15,13 +15,18 @@
     IBOutlet UILabel *balanceDue;
     IBOutlet UILabel *UserBalanceDue;
     IBOutlet UIButton *renterIssues;
-    IBOutlet UIButton *contracts;
+    IBOutlet UIButton *contract;
     IBOutlet UIButton *messageRenter;
     IBOutlet UIButton *expenses;
     IBOutlet UIButton *back;
-
-
-
     
 }
+
+-(IBAction)renterIssues:(id)sender;
+-(IBAction)contract:(id)sender;
+-(IBAction)messageRenter:(id)sender;
+-(IBAction)expenses:(id)sender;
+-(IBAction)back:(id)sender;
+
+
 @end
