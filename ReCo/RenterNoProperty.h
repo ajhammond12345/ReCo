@@ -13,8 +13,10 @@
     IBOutlet UITextField *houseField;
     IBOutlet UIButton *uploadContractButton;
     IBOutlet UILabel *uploadContractLabel;
+    IBOutlet UIButton *continues;
 }
 
+-(IBAction)continues:(id)sender;
 @end
 
 

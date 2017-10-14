@@ -20,4 +20,11 @@
 
 }
 
+-(IBAction)notifications:(id)sender;
+-(IBAction)payment:(id)sender;
+-(IBAction)issues:(id)sender;
+-(IBAction)paperwork:(id)sender;
+
+
+
 @end

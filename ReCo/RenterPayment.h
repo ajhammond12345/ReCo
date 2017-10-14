@@ -22,4 +22,9 @@
 
 }
 
+-(IBAction)payNow:(id)sender;
+-(IBAction)back:(id)sender;
+
+
+
 @end

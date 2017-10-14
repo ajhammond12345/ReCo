@@ -14,6 +14,11 @@
 
 @implementation RenterNoProperty
 
+
+-(IBAction)continues:(id)sender {
+    [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

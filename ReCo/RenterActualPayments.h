@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RenterActualPayments : UIViewController
+@interface RenterActualPayments : UIViewController {
+    
+}
 
 @end

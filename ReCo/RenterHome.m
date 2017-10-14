@@ -14,6 +14,21 @@
 
 @implementation RenterHome
 
+
+-(IBAction)notifications:(id)sender{
+    [self performSegueWithIdentifier:@"toReceiveCommunicationsSpecific" sender:self];
+}
+-(IBAction)payment:(id)sender{
+    [self performSegueWithIdentifier:@"toRenterPayment" sender:self];
+}
+-(IBAction)issues:(id)sender{
+    [self performSegueWithIdentifier:@"toSendCommunication" sender:self];
+}
+-(IBAction)paperwork:(id)sender{
+    [self performSegueWithIdentifier:@"toRenterPaperwork" sender:self];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

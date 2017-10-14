@@ -14,6 +14,17 @@
 
 @implementation RecieveCommunicationsList
 
+
+-(IBAction)back:(id)sender{
+    [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+}
+
+/* Still need to send a parameter with this */
+-(void)toReceiveCommunicationsSpecific {
+    [self performSegueWithIdentifier:@"toRecieveCommunicationsSpecific" sender:self];
+}
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
