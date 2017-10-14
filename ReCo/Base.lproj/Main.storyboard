@@ -501,7 +501,7 @@
                                 <rect key="frame" x="0.0" y="53" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VJ1-Q0-hjN" customClass="PropertyCells">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" id="VJ1-Q0-hjN" customClass="PropertyCells">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJ1-Q0-hjN" id="yTL-L7-AUb">
@@ -1180,16 +1180,17 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="ldb-3Q-RBA"/>
         <segue reference="WWv-7b-gjX"/>
         <segue reference="6cX-O3-Py1"/>
-        <segue reference="XCB-9f-fGH"/>
+        <segue reference="nc8-Pk-zR4"/>
         <segue reference="UCD-6U-jdD"/>
-        <segue reference="39R-um-CPs"/>
-        <segue reference="gW4-Oj-2Qp"/>
+        <segue reference="JDY-oo-Q3v"/>
+        <segue reference="vLw-IY-cwP"/>
         <segue reference="8C8-4g-4g2"/>
         <segue reference="K38-BR-3Ly"/>
         <segue reference="pxu-nP-1wa"/>
         <segue reference="WKe-Or-Bgs"/>
-        <segue reference="xzD-xB-pEQ"/>
+        <segue reference="feA-52-TuZ"/>
     </inferredMetricsTieBreakers>
 </document>

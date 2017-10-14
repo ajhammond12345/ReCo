@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Property.h"
 
 @interface ManagerHome : UIViewController <UITableViewDataSource,UITableViewDelegate>{
     
@@ -16,7 +17,8 @@
     IBOutlet UIButton *expenses;
     IBOutlet UIButton *contracts;
 }
-
+@property Property *propertyToSend;
+@property NSArray *propertyList;
 -(IBAction)addProperty:(id)sender;
 -(void)toPropertyView;
 -(IBAction)expenses:(id)sender;
