@@ -14,6 +14,14 @@
 
 @implementation ViewController
 
+-(IBAction)propertyManager:(id)sender {
+    _isPM = true;
+}
+
+-(IBAction)tenant:(id)sender {
+    _isPM = false;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.

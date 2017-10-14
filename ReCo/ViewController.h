@@ -28,6 +28,10 @@
     IBOutlet UIButton *next2;
 }
 
+@property bool isPM;
+-(IBAction)propertyManager:(id)sender;
+-(IBAction)tenant:(id)sender;
+
 
 @end
 
