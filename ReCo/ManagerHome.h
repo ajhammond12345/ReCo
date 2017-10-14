@@ -13,7 +13,6 @@
     IBOutlet UIButton *addProperty;
     IBOutlet UILabel *managerHome;
     IBOutlet UITableView *propertyTable;
-    IBOutlet UITableViewCell *cell;
     IBOutlet UIButton *expenses;
     IBOutlet UIButton *contracts;
 }

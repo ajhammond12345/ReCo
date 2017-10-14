@@ -13,7 +13,6 @@
     IBOutlet UIButton *back;
     IBOutlet UILabel *expenses;
     IBOutlet UITableView *expensesTable;
-    IBOutlet UITableViewCell *cell;
 }
 
 -(void)toSpecificPropertyExpenses;

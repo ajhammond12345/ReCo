@@ -7,6 +7,7 @@
 //
 
 #import "ManagerHome.h"
+#import "PastContracts.h"
 
 @interface ManagerHome ()
 
@@ -27,6 +28,13 @@
 }
 -(IBAction)contracts:(id)sender{
     [self performSegueWithIdentifier:@"toPastContracts" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toCreateProperty"]) {
+        PastContracts *destViewController = segue.destinationViewController;
+        destViewController.isManager = true;
+    }
 }
 
 - (void)viewDidLoad {

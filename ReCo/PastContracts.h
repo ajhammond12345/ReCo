@@ -12,7 +12,6 @@
     
     IBOutlet UILabel *pastContracts;
     IBOutlet UITableView *contractTable;
-    IBOutlet UITableViewCell *cell;
     IBOutlet UIButton *back;
 }
 

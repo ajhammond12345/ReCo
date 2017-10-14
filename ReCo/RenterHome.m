@@ -7,6 +7,9 @@
 //
 
 #import "RenterHome.h"
+#import "RecieveCommunicationsList.h"
+#import "SendCommunication.h"
+
 
 @interface RenterHome ()
 
@@ -14,9 +17,8 @@
 
 @implementation RenterHome
 
-
 -(IBAction)notifications:(id)sender{
-    [self performSegueWithIdentifier:@"toReceiveCommunicationsSpecific" sender:self];
+    [self performSegueWithIdentifier:@"toRecieveCommunicationsList" sender:self];
 }
 -(IBAction)payment:(id)sender{
     [self performSegueWithIdentifier:@"toRenterPayment" sender:self];
@@ -26,6 +28,19 @@
 }
 -(IBAction)paperwork:(id)sender{
     [self performSegueWithIdentifier:@"toRenterPaperwork" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toRecieveCommunicationsList"]) {
+        RecieveCommunicationsList *destViewController = segue.destinationViewController;
+        destViewController.isManager = false;
+    }
+    if ([segue.identifier isEqualToString:@"toSendCommunication"]) {
+        SendCommunication *destViewController = segue.destinationViewController;
+        destViewController.isManager = false;
+    }
+
+    
 }
 
 

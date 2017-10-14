@@ -7,6 +7,9 @@
 //
 
 #import "RenterPaperwork.h"
+#import "PropertyContract.h"
+#import "PastContracts.h"
+
 
 @interface RenterPaperwork ()
 
@@ -22,6 +25,19 @@
 }
 -(IBAction)back:(id)sender{
     [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toPropertyContract"]) {
+        PropertyContract *destViewController = segue.destinationViewController;
+        destViewController.isManager = false;
+    }
+    if ([segue.identifier isEqualToString:@"toPastContracts"]) {
+        PastContracts *destViewController = segue.destinationViewController;
+        destViewController.isManager = false;
+    }
+    
+    
 }
 
 - (void)viewDidLoad {

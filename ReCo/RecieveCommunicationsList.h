@@ -12,7 +12,6 @@
     
     IBOutlet UILabel *notificatations;
     IBOutlet UITableView *notificationTable;
-    IBOutlet UITableViewCell *cell;
     IBOutlet UIButton *back;
     
 }

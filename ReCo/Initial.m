@@ -37,6 +37,8 @@
         [self performSegueWithIdentifier:@"toRegistration" sender:self];
     }
     // Do any additional setup after loading the view.
+    [self isFirstTime];
+    
 }
 
 - (void)didReceiveMemoryWarning {
