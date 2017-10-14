@@ -22,6 +22,7 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    password.delegate = self;
     // Dispose of any resources that can be recreated.
 }
 
