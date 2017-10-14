@@ -11,7 +11,7 @@
 
 @interface NotificationCells : UITableViewCell
 
-Notification *notification;
+@property Notification *notification;
 
 -(void)updateCell;
 
