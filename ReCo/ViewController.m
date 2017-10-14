@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController ()
+@interface ViewController () <UITextFieldDelegate>
 
 @end
 
@@ -23,6 +23,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     password.delegate = self;
+    username.delegate = self;
+    legalName.delegate = self;
+    EmailAddress.delegate = self;
+    phoneNumber.delegate = self;
+    
     // Dispose of any resources that can be recreated.
 }
 
