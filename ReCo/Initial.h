@@ -12,7 +12,5 @@
     
 }
 
-@property bool firstTime;
-@property bool isManager;
-
+-(int)getUserType;
 @end

@@ -14,8 +14,28 @@
 
 @implementation Initial
 
+-(int)getUserType {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *userType = [defaults objectForKey:@"user_type"];
+    return (int)userType;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *firstLogin = [defaults objectForKey:@"first_login"];
+    int userType = [self getUserType];
+    if ([firstLogin isEqualToNumber: [NSNumber numberWithInt:2]]) {
+        switch (userType) {
+            case 0: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+            case 1: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+            case 2: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
+        }
+    }
+    else {
+        [defaults setObject:[NSNumber numberWithInt:2] forKey:@"first_login"];
+        [self performSegueWithIdentifier:@"toRegistration" sender:self];
+    }
     // Do any additional setup after loading the view.
 }
 
