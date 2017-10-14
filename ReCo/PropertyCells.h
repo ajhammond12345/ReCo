@@ -13,4 +13,5 @@
     IBOutlet UIImageView *housePic;
 }
 @property Property *property;
+-(void)updateCell;
 @end
