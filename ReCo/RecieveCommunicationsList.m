@@ -31,13 +31,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    notificationTable.delegate = self;
+    notificationTable.dataSource = self;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    notificationTable.delegate = self;
-    notificationTable.dataSource = self;
+    
     // Dispose of any resources that can be recreated.
 }
 
