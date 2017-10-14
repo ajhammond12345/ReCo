@@ -278,7 +278,6 @@
                     </view>
                     <connections>
                         <outlet property="back" destination="loe-dd-D71" id="ElD-xU-6f4"/>
-                        <outlet property="cell" destination="31N-ma-GNz" id="SA3-8c-K4W"/>
                         <outlet property="contractTable" destination="HJ2-9s-Nmv" id="SDR-wF-oWE"/>
                         <outlet property="pastContracts" destination="JjK-aw-jui" id="LJj-Y4-tQR"/>
                         <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="2Ol-PF-a8h"/>
@@ -409,7 +408,6 @@
                     </view>
                     <connections>
                         <outlet property="back" destination="rsO-Hl-cbO" id="mpt-oF-YRE"/>
-                        <outlet property="cell" destination="vFz-ag-15B" id="Smq-xz-Tfs"/>
                         <outlet property="notificatations" destination="Pok-LL-SIH" id="Pse-fe-fHd"/>
                         <outlet property="notificationTable" destination="Fkk-OB-Lun" id="vOu-gI-PRr"/>
                         <segue destination="Iq1-zG-Oep" kind="presentation" identifier="toRecieveCommunicationsSpecific" id="nep-7I-WwE"/>
@@ -490,7 +488,7 @@
                                 <rect key="frame" x="0.0" y="53" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VJ1-Q0-hjN">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="VJ1-Q0-hjN" customClass="PropertyCells">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJ1-Q0-hjN" id="yTL-L7-AUb">
@@ -534,7 +532,6 @@
                     </view>
                     <connections>
                         <outlet property="addProperty" destination="Mnz-5l-kam" id="Pqw-KL-AaS"/>
-                        <outlet property="cell" destination="VJ1-Q0-hjN" id="xwP-nU-1oF"/>
                         <outlet property="contracts" destination="Jq0-hQ-tYx" id="Wgu-Vn-8AL"/>
                         <outlet property="expenses" destination="Gao-h8-DeL" id="lMF-h3-f9S"/>
                         <outlet property="managerHome" destination="VHv-Be-XRY" id="rey-QX-q3d"/>
@@ -704,7 +701,6 @@
                     </view>
                     <connections>
                         <outlet property="back" destination="QMV-3e-SMa" id="qbd-z8-BZP"/>
-                        <outlet property="cell" destination="rGe-A7-x0q" id="BbR-0x-o1i"/>
                         <outlet property="expenses" destination="lal-6d-FrT" id="zTF-8G-sYq"/>
                         <outlet property="expensesTable" destination="GqU-Cb-Oqo" id="vRA-5g-SmD"/>
                         <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="gK6-Bd-YxR"/>
@@ -1175,8 +1171,8 @@
         <segue reference="Pal-e0-YM9"/>
         <segue reference="5pm-Fk-VYI"/>
         <segue reference="UCD-6U-jdD"/>
-        <segue reference="39R-um-CPs"/>
-        <segue reference="gW4-Oj-2Qp"/>
+        <segue reference="JDY-oo-Q3v"/>
+        <segue reference="Cot-Iq-tak"/>
         <segue reference="gK6-Bd-YxR"/>
         <segue reference="i7g-Jv-4YO"/>
         <segue reference="b9V-ug-utw"/>
