@@ -41,7 +41,7 @@
 //delegate method used to load table view
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
         ContractCells *cell = (ContractCells *)[tableView dequeueReusableCellWithIdentifier:@"contractCell" forIndexPath:indexPath];
-       cell.property = [_propertyList objectAtIndex:indexPath.row];
+       cell.contract = [_contractList objectAtIndex:indexPath.row];
         //updates the views in the cell
         [cell updateCell];
         
