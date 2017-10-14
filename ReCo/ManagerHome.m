@@ -9,7 +9,7 @@
 #import "ManagerHome.h"
 #import "PastContracts.h"
 
-@interface ManagerHome ()
+@interface ManagerHome () <UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -39,6 +39,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    propertyTable.delegate = self;
+    propertyTable.dataSource = self;
     // Do any additional setup after loading the view.
 }
 

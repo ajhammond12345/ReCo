@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManagerHome : UIViewController{
+@interface ManagerHome : UIViewController <UITableViewDataSource,UITableViewDelegate>{
     
     IBOutlet UIButton *addProperty;
     IBOutlet UILabel *managerHome;
