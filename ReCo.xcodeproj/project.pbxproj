@@ -15,6 +15,21 @@
 		7039BA741F91DCDB00A529A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA731F91DCDB00A529A1 /* main.m */; };
 		7039BA7E1F91DCDB00A529A1 /* ReCoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA7D1F91DCDB00A529A1 /* ReCoTests.m */; };
 		7039BA891F91DCDC00A529A1 /* ReCoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA881F91DCDC00A529A1 /* ReCoUITests.m */; };
+		E60DE8451F9211830006C5FC /* Initial.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8441F9211830006C5FC /* Initial.m */; };
+		E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8471F9211CE0006C5FC /* ManagerHome.m */; };
+		E60DE84B1F9211FA0006C5FC /* CreateProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE84A1F9211FA0006C5FC /* CreateProperty.m */; };
+		E60DE84E1F9212300006C5FC /* PropertyView.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE84D1F9212300006C5FC /* PropertyView.m */; };
+		E60DE8511F92124C0006C5FC /* SpecificPropertyExpenses.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8501F92124C0006C5FC /* SpecificPropertyExpenses.m */; };
+		E60DE8541F9212730006C5FC /* SendCommunication.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8531F9212730006C5FC /* SendCommunication.m */; };
+		E60DE8571F9212840006C5FC /* RecieveCommunicationsList.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8561F9212840006C5FC /* RecieveCommunicationsList.m */; };
+		E60DE85A1F9212930006C5FC /* RecieveCommunicationsSpecific.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8591F9212930006C5FC /* RecieveCommunicationsSpecific.m */; };
+		E60DE85D1F9212B70006C5FC /* PropertyContract.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE85C1F9212B70006C5FC /* PropertyContract.m */; };
+		E60DE8601F9212C80006C5FC /* PastContracts.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE85F1F9212C80006C5FC /* PastContracts.m */; };
+		E60DE8631F9212E00006C5FC /* RenterHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8621F9212E00006C5FC /* RenterHome.m */; };
+		E60DE8661F9212F30006C5FC /* RenterPaperwork.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8651F9212F30006C5FC /* RenterPaperwork.m */; };
+		E60DE8691F92130B0006C5FC /* RenterNoProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8681F92130B0006C5FC /* RenterNoProperty.m */; };
+		E60DE86C1F92131C0006C5FC /* RenterPayment.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE86B1F92131C0006C5FC /* RenterPayment.m */; };
+		E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE86E1F92132C0006C5FC /* RenterActualPayments.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +66,36 @@
 		7039BA841F91DCDC00A529A1 /* ReCoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReCoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7039BA881F91DCDC00A529A1 /* ReCoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReCoUITests.m; sourceTree = "<group>"; };
 		7039BA8A1F91DCDC00A529A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E60DE8431F9211830006C5FC /* Initial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initial.h; sourceTree = "<group>"; };
+		E60DE8441F9211830006C5FC /* Initial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initial.m; sourceTree = "<group>"; };
+		E60DE8461F9211CE0006C5FC /* ManagerHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerHome.h; sourceTree = "<group>"; };
+		E60DE8471F9211CE0006C5FC /* ManagerHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerHome.m; sourceTree = "<group>"; };
+		E60DE8491F9211FA0006C5FC /* CreateProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateProperty.h; sourceTree = "<group>"; };
+		E60DE84A1F9211FA0006C5FC /* CreateProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateProperty.m; sourceTree = "<group>"; };
+		E60DE84C1F9212300006C5FC /* PropertyView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyView.h; sourceTree = "<group>"; };
+		E60DE84D1F9212300006C5FC /* PropertyView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyView.m; sourceTree = "<group>"; };
+		E60DE84F1F92124C0006C5FC /* SpecificPropertyExpenses.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpecificPropertyExpenses.h; sourceTree = "<group>"; };
+		E60DE8501F92124C0006C5FC /* SpecificPropertyExpenses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpecificPropertyExpenses.m; sourceTree = "<group>"; };
+		E60DE8521F9212730006C5FC /* SendCommunication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SendCommunication.h; sourceTree = "<group>"; };
+		E60DE8531F9212730006C5FC /* SendCommunication.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SendCommunication.m; sourceTree = "<group>"; };
+		E60DE8551F9212840006C5FC /* RecieveCommunicationsList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecieveCommunicationsList.h; sourceTree = "<group>"; };
+		E60DE8561F9212840006C5FC /* RecieveCommunicationsList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecieveCommunicationsList.m; sourceTree = "<group>"; };
+		E60DE8581F9212930006C5FC /* RecieveCommunicationsSpecific.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RecieveCommunicationsSpecific.h; sourceTree = "<group>"; };
+		E60DE8591F9212930006C5FC /* RecieveCommunicationsSpecific.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RecieveCommunicationsSpecific.m; sourceTree = "<group>"; };
+		E60DE85B1F9212B70006C5FC /* PropertyContract.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyContract.h; sourceTree = "<group>"; };
+		E60DE85C1F9212B70006C5FC /* PropertyContract.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyContract.m; sourceTree = "<group>"; };
+		E60DE85E1F9212C80006C5FC /* PastContracts.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PastContracts.h; sourceTree = "<group>"; };
+		E60DE85F1F9212C80006C5FC /* PastContracts.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastContracts.m; sourceTree = "<group>"; };
+		E60DE8611F9212E00006C5FC /* RenterHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenterHome.h; sourceTree = "<group>"; };
+		E60DE8621F9212E00006C5FC /* RenterHome.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterHome.m; sourceTree = "<group>"; };
+		E60DE8641F9212F30006C5FC /* RenterPaperwork.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenterPaperwork.h; sourceTree = "<group>"; };
+		E60DE8651F9212F30006C5FC /* RenterPaperwork.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterPaperwork.m; sourceTree = "<group>"; };
+		E60DE8671F92130B0006C5FC /* RenterNoProperty.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenterNoProperty.h; sourceTree = "<group>"; };
+		E60DE8681F92130B0006C5FC /* RenterNoProperty.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterNoProperty.m; sourceTree = "<group>"; };
+		E60DE86A1F92131C0006C5FC /* RenterPayment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenterPayment.h; sourceTree = "<group>"; };
+		E60DE86B1F92131C0006C5FC /* RenterPayment.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterPayment.m; sourceTree = "<group>"; };
+		E60DE86D1F92132C0006C5FC /* RenterActualPayments.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenterActualPayments.h; sourceTree = "<group>"; };
+		E60DE86E1F92132C0006C5FC /* RenterActualPayments.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RenterActualPayments.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +150,36 @@
 				7039BA651F91DCDB00A529A1 /* AppDelegate.m */,
 				7039BA671F91DCDB00A529A1 /* ViewController.h */,
 				7039BA681F91DCDB00A529A1 /* ViewController.m */,
+				E60DE8431F9211830006C5FC /* Initial.h */,
+				E60DE8461F9211CE0006C5FC /* ManagerHome.h */,
+				E60DE8471F9211CE0006C5FC /* ManagerHome.m */,
+				E60DE8491F9211FA0006C5FC /* CreateProperty.h */,
+				E60DE84C1F9212300006C5FC /* PropertyView.h */,
+				E60DE84D1F9212300006C5FC /* PropertyView.m */,
+				E60DE84A1F9211FA0006C5FC /* CreateProperty.m */,
+				E60DE8441F9211830006C5FC /* Initial.m */,
+				E60DE84F1F92124C0006C5FC /* SpecificPropertyExpenses.h */,
+				E60DE8521F9212730006C5FC /* SendCommunication.h */,
+				E60DE8551F9212840006C5FC /* RecieveCommunicationsList.h */,
+				E60DE85B1F9212B70006C5FC /* PropertyContract.h */,
+				E60DE85C1F9212B70006C5FC /* PropertyContract.m */,
+				E60DE8561F9212840006C5FC /* RecieveCommunicationsList.m */,
+				E60DE8581F9212930006C5FC /* RecieveCommunicationsSpecific.h */,
+				E60DE85E1F9212C80006C5FC /* PastContracts.h */,
+				E60DE8671F92130B0006C5FC /* RenterNoProperty.h */,
+				E60DE8681F92130B0006C5FC /* RenterNoProperty.m */,
+				E60DE85F1F9212C80006C5FC /* PastContracts.m */,
+				E60DE8611F9212E00006C5FC /* RenterHome.h */,
+				E60DE8621F9212E00006C5FC /* RenterHome.m */,
+				E60DE8641F9212F30006C5FC /* RenterPaperwork.h */,
+				E60DE8651F9212F30006C5FC /* RenterPaperwork.m */,
+				E60DE86D1F92132C0006C5FC /* RenterActualPayments.h */,
+				E60DE86E1F92132C0006C5FC /* RenterActualPayments.m */,
+				E60DE86A1F92131C0006C5FC /* RenterPayment.h */,
+				E60DE86B1F92131C0006C5FC /* RenterPayment.m */,
+				E60DE8591F9212930006C5FC /* RecieveCommunicationsSpecific.m */,
+				E60DE8531F9212730006C5FC /* SendCommunication.m */,
+				E60DE8501F92124C0006C5FC /* SpecificPropertyExpenses.m */,
 				7039BA6A1F91DCDB00A529A1 /* Main.storyboard */,
 				7039BA6D1F91DCDB00A529A1 /* Assets.xcassets */,
 				7039BA6F1F91DCDB00A529A1 /* LaunchScreen.storyboard */,
@@ -265,9 +340,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E60DE86C1F92131C0006C5FC /* RenterPayment.m in Sources */,
+				E60DE8631F9212E00006C5FC /* RenterHome.m in Sources */,
 				7039BA691F91DCDB00A529A1 /* ViewController.m in Sources */,
+				E60DE85A1F9212930006C5FC /* RecieveCommunicationsSpecific.m in Sources */,
 				7039BA741F91DCDB00A529A1 /* main.m in Sources */,
+				E60DE84E1F9212300006C5FC /* PropertyView.m in Sources */,
+				E60DE8511F92124C0006C5FC /* SpecificPropertyExpenses.m in Sources */,
+				E60DE8661F9212F30006C5FC /* RenterPaperwork.m in Sources */,
+				E60DE8601F9212C80006C5FC /* PastContracts.m in Sources */,
+				E60DE84B1F9211FA0006C5FC /* CreateProperty.m in Sources */,
+				E60DE8541F9212730006C5FC /* SendCommunication.m in Sources */,
+				E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */,
+				E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */,
+				E60DE85D1F9212B70006C5FC /* PropertyContract.m in Sources */,
+				E60DE8451F9211830006C5FC /* Initial.m in Sources */,
+				E60DE8571F9212840006C5FC /* RecieveCommunicationsList.m in Sources */,
 				7039BA661F91DCDB00A529A1 /* AppDelegate.m in Sources */,
+				E60DE8691F92130B0006C5FC /* RenterNoProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -1,24 +1,332 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="t0X-GI-Dse">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Register-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController title="Register" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="t0X-GI-Dse" kind="presentation" identifier="toManagerOrRenter" id="Pek-Jt-zv1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-153" y="34"/>
+        </scene>
+        <!--Initial-->
+        <scene sceneID="Qen-wO-b10">
+            <objects>
+                <viewController title="Initial" id="t0X-GI-Dse" customClass="Initial" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iZq-ha-v98">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="TYb-mQ-WfR"/>
+                    </view>
+                    <connections>
+                        <segue destination="XKi-XM-s4A" kind="presentation" identifier="toRenterNoProperty" id="Lft-2b-XFC"/>
+                        <segue destination="tD9-Xj-bXg" kind="presentation" identifier="toRenterHome" id="afX-Jr-UhN"/>
+                        <segue destination="qyH-Y3-q0k" kind="presentation" id="XQa-qW-UXf"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="toRegister" id="dX0-TU-mM2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rSA-nI-BQt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="775" y="34"/>
+        </scene>
+        <!--PastContracts-->
+        <scene sceneID="6ta-9X-Cqh">
+            <objects>
+                <viewController title="PastContracts" id="FRS-9J-vQs" customClass="PastContracts" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="67K-ry-LNF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="RMg-du-XBc"/>
+                    </view>
+                    <connections>
+                        <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="2Ol-PF-a8h"/>
+                        <segue destination="AQm-bl-OhO" kind="presentation" identifier="toPastContracts" id="Fy7-Re-CBe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hyp-Nv-bhA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7113" y="242"/>
+        </scene>
+        <!--PropertyContract-->
+        <scene sceneID="iLS-Xj-h1a">
+            <objects>
+                <viewController title="PropertyContract" id="tr1-bS-SDA" customClass="PropertyContract" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F8Q-Vn-ZOE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8EL-gj-cdz"/>
+                    </view>
+                    <connections>
+                        <segue destination="GlT-Vt-oj1" kind="presentation" identifier="toPropertyView" id="gb6-IY-cUn"/>
+                        <segue destination="AQm-bl-OhO" kind="presentation" identifier="toRenterPaperwork" id="4BH-fN-zSa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cVT-BB-fGn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6081" y="242"/>
+        </scene>
+        <!--SendCommunication-->
+        <scene sceneID="iSH-up-5Vl">
+            <objects>
+                <viewController title="SendCommunication" id="6CL-EM-v1L" customClass="SendCommunication" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jEV-nZ-9iL">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6K9-6A-Vdx"/>
+                    </view>
+                    <connections>
+                        <segue destination="GlT-Vt-oj1" kind="presentation" identifier="toPropertyView" id="RGn-Bg-VKJ"/>
+                        <segue destination="tD9-Xj-bXg" kind="presentation" identifier="toRenterHome" id="mbk-s3-HUv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KIW-ca-ORE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2881" y="242"/>
+        </scene>
+        <!--RecieveCommunicationsList-->
+        <scene sceneID="9XH-DW-290">
+            <objects>
+                <viewController title="RecieveCommunicationsList" id="cbB-G5-eHI" customClass="RecieveCommunicationsList" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VPr-T0-X6D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="HX3-yY-YLx"/>
+                    </view>
+                    <connections>
+                        <segue destination="Iq1-zG-Oep" kind="presentation" identifier="toRecieveCommunicationsSpecific" id="nep-7I-WwE"/>
+                        <segue destination="GlT-Vt-oj1" kind="presentation" identifier="toPropertyView" id="Cot-Iq-tak"/>
+                        <segue destination="tD9-Xj-bXg" kind="presentation" identifier="toRenterHome" id="5pm-Fk-VYI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hDV-1y-E0t" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4201" y="242"/>
+        </scene>
+        <!--RecieveCommunicationsSpecific-->
+        <scene sceneID="40w-1q-XmH">
+            <objects>
+                <viewController title="RecieveCommunicationsSpecific" id="Iq1-zG-Oep" customClass="RecieveCommunicationsSpecific" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Jbr-I0-zsU">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="rHX-0s-Daa"/>
+                    </view>
+                    <connections>
+                        <segue destination="cbB-G5-eHI" kind="presentation" identifier="RecieveCommunicationsList" id="wqZ-l3-Eiq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u4H-hP-apE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5050" y="242"/>
+        </scene>
+        <!--ManagerHome-->
+        <scene sceneID="1Dl-32-I4X">
+            <objects>
+                <viewController title="ManagerHome" id="qyH-Y3-q0k" customClass="ManagerHome" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Uu5-1D-B9O">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DjV-bA-OYl"/>
+                    </view>
+                    <connections>
+                        <segue destination="FRS-9J-vQs" kind="presentation" identifier="toPastContracts" id="feA-52-TuZ"/>
+                        <segue destination="h44-ZF-WjY" kind="presentation" identifier="toCreateProperty" id="ldb-3Q-RBA"/>
+                        <segue destination="GlT-Vt-oj1" kind="presentation" identifier="toPropertyView" id="vLw-IY-cwP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yw9-yR-Fzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="935"/>
+        </scene>
+        <!--PropertyView-->
+        <scene sceneID="GLo-Ze-BgW">
+            <objects>
+                <viewController title="PropertyView" id="GlT-Vt-oj1" customClass="PropertyView" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8da-Vk-qem">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="eHA-WQ-sh9"/>
+                    </view>
+                    <connections>
+                        <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="xhx-wv-KFv"/>
+                        <segue destination="tr1-bS-SDA" kind="presentation" identifier="toPropertyContract" id="k6E-YX-1jl"/>
+                        <segue destination="EMc-Mf-BKX" kind="presentation" identifier="toSpecificPropertyExpenses" id="E5M-PT-dFE"/>
+                        <segue destination="6CL-EM-v1L" kind="presentation" identifier="toSendCommunication" id="b9V-ug-utw"/>
+                        <segue destination="cbB-G5-eHI" kind="presentation" identifier="toRecieveCommunicationsList" id="i7g-Jv-4YO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tWV-HM-MQ5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3094" y="1013"/>
+        </scene>
+        <!--SpecificPropertyExpenses-->
+        <scene sceneID="2hh-xJ-1sU">
+            <objects>
+                <viewController title="SpecificPropertyExpenses" id="EMc-Mf-BKX" customClass="SpecificPropertyExpenses" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ufW-Sd-Vj4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Yfc-O5-FyM"/>
+                    </view>
+                    <connections>
+                        <segue destination="GlT-Vt-oj1" kind="presentation" identifier="toPropertyView" id="gW4-Oj-2Qp"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EgH-sk-Guw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3975" y="1706"/>
+        </scene>
+        <!--CreateProperty-->
+        <scene sceneID="DLa-vc-7cA">
+            <objects>
+                <viewController title="CreateProperty" id="h44-ZF-WjY" customClass="CreateProperty" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AzV-pA-r9Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="B9c-Mw-fB5"/>
+                    </view>
+                    <connections>
+                        <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="8C8-4g-4g2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WY5-Eh-DJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="1804"/>
+        </scene>
+        <!--RenterHome-->
+        <scene sceneID="QxY-eT-ajg">
+            <objects>
+                <viewController title="RenterHome" id="tD9-Xj-bXg" customClass="RenterHome" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZbD-xb-Ys5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="MjK-yb-YoS"/>
+                    </view>
+                    <connections>
+                        <segue destination="6CL-EM-v1L" kind="presentation" identifier="toSendCommunication" id="pxu-nP-1wa"/>
+                        <segue destination="cbB-G5-eHI" kind="presentation" identifier="toRecieveCommunicationsList" id="K38-BR-3Ly"/>
+                        <segue destination="AQm-bl-OhO" kind="presentation" identifier="toRenterPaperwork" id="WWv-7b-gjX"/>
+                        <segue destination="O3h-L3-MGE" kind="presentation" identifier="toRenterPayment" id="Pal-e0-YM9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tsv-hN-v86" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2186" y="-462"/>
+        </scene>
+        <!--RenterPayment-->
+        <scene sceneID="k40-wZ-il3">
+            <objects>
+                <viewController title="RenterPayment" id="O3h-L3-MGE" customClass="RenterPayment" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="emo-7B-wi7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8yH-vJ-oRF"/>
+                    </view>
+                    <connections>
+                        <segue destination="tD9-Xj-bXg" kind="presentation" identifier="toRenterHome" id="LYF-if-itR"/>
+                        <segue destination="SZp-7Z-xnI" kind="presentation" identifier="toRenterActualPayments" id="ff3-uu-AJw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KDP-K8-Mrn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3428" y="-1262"/>
+        </scene>
+        <!--RenterActualPayments-->
+        <scene sceneID="WMh-kr-bMh">
+            <objects>
+                <viewController title="RenterActualPayments" id="SZp-7Z-xnI" customClass="RenterActualPayments" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5pd-AX-Inz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="DaB-GT-sEF"/>
+                    </view>
+                    <connections>
+                        <segue destination="O3h-L3-MGE" kind="presentation" identifier="toRenterPayment" id="6cX-O3-Py1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3nR-mA-z6G" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4524" y="-1263"/>
+        </scene>
+        <!--RenterNoProperty-->
+        <scene sceneID="h62-PX-TIJ">
+            <objects>
+                <viewController title="RenterNoProperty" id="XKi-XM-s4A" customClass="RenterNoProperty" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XxL-XN-qgo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="jPI-Jz-d9D"/>
+                    </view>
+                    <connections>
+                        <segue destination="tD9-Xj-bXg" kind="presentation" id="nc8-Pk-zR4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="esP-XO-FCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1750" y="-1261"/>
+        </scene>
+        <!--RenterPaperwork-->
+        <scene sceneID="vDb-Jt-anc">
+            <objects>
+                <viewController title="RenterPaperwork" id="AQm-bl-OhO" customClass="RenterPaperwork" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="E5r-A5-k58">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="zso-RI-Koc"/>
+                    </view>
+                    <connections>
+                        <segue destination="tD9-Xj-bXg" kind="presentation" identifier="toRenterHome" id="XCB-9f-fGH"/>
+                        <segue destination="FRS-9J-vQs" kind="presentation" identifier="toPastContracts" id="xzD-xB-pEQ"/>
+                        <segue destination="tr1-bS-SDA" kind="presentation" identifier="toPropertyContract" id="WKe-Or-Bgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4X-8h-tdw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5873" y="-540"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="Fy7-Re-CBe"/>
+        <segue reference="Pal-e0-YM9"/>
+        <segue reference="afX-Jr-UhN"/>
+        <segue reference="gW4-Oj-2Qp"/>
+        <segue reference="8C8-4g-4g2"/>
+        <segue reference="i7g-Jv-4YO"/>
+        <segue reference="b9V-ug-utw"/>
+        <segue reference="k6E-YX-1jl"/>
+        <segue reference="feA-52-TuZ"/>
+    </inferredMetricsTieBreakers>
 </document>
