@@ -531,13 +531,47 @@
                                 <rect key="frame" x="0.0" y="53" width="375" height="542"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" id="VJ1-Q0-hjN" customClass="PropertyCells">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="propertyCell" rowHeight="140" id="VJ1-Q0-hjN" customClass="PropertyCells">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="140"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="VJ1-Q0-hjN" id="yTL-L7-AUb">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="139.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9bc-h4-jlq">
+                                                    <rect key="frame" x="21" y="5" width="134" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="9bc-h4-jlq" secondAttribute="height" multiplier="67:64" id="gCo-zC-ee3"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Maj-HX-JEh">
+                                                    <rect key="frame" x="166" y="5" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JOM-wE-IQz">
+                                                    <rect key="frame" x="166" y="112" width="42" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="JOM-wE-IQz" firstAttribute="bottom" secondItem="9bc-h4-jlq" secondAttribute="bottom" id="1cD-AK-RpG"/>
+                                                <constraint firstItem="Maj-HX-JEh" firstAttribute="top" secondItem="9bc-h4-jlq" secondAttribute="top" id="6Og-rR-pg0"/>
+                                                <constraint firstItem="9bc-h4-jlq" firstAttribute="top" secondItem="yTL-L7-AUb" secondAttribute="top" constant="5" id="AGM-2b-Kzm"/>
+                                                <constraint firstItem="9bc-h4-jlq" firstAttribute="leading" secondItem="yTL-L7-AUb" secondAttribute="leading" constant="21" id="bC1-LU-PIi"/>
+                                                <constraint firstItem="JOM-wE-IQz" firstAttribute="leading" secondItem="9bc-h4-jlq" secondAttribute="trailing" constant="11" id="fYW-DC-kf9"/>
+                                                <constraint firstItem="Maj-HX-JEh" firstAttribute="leading" secondItem="9bc-h4-jlq" secondAttribute="trailing" constant="11" id="pwk-XD-SDX"/>
+                                                <constraint firstItem="9bc-h4-jlq" firstAttribute="height" secondItem="yTL-L7-AUb" secondAttribute="height" multiplier="128:139" id="yNe-R5-2fT"/>
+                                            </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="address" destination="Maj-HX-JEh" id="Ctq-SX-SaY"/>
+                                            <outlet property="housePic" destination="9bc-h4-jlq" id="iMn-ZI-D0O"/>
+                                            <outlet property="rent" destination="JOM-wE-IQz" id="Uqe-YM-JFK"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -879,6 +913,12 @@
                                 <rect key="frame" x="22" y="20" width="34" height="30"/>
                                 <state key="normal" title="Back"/>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-Vh-ktK">
+                                <rect key="frame" x="115" y="196" width="145" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qzS-Vh-ktK" secondAttribute="height" multiplier="145:128" id="MWZ-1p-kJ6"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="040-Js-95N">
                                 <rect key="frame" x="115" y="245" width="145" height="30"/>
                                 <state key="normal" title="Upload House Avatar"/>
@@ -921,9 +961,12 @@
                             <constraint firstItem="jvE-Fy-Mwq" firstAttribute="leading" secondItem="B9c-Mw-fB5" secondAttribute="leading" constant="22" id="KKL-2S-7Ka"/>
                             <constraint firstItem="Tbc-Pq-J03" firstAttribute="centerX" secondItem="B9c-Mw-fB5" secondAttribute="centerX" id="Kbq-KN-SXx"/>
                             <constraint firstItem="JXh-B1-RJl" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="63" id="Om6-VM-ULn"/>
+                            <constraint firstItem="qzS-Vh-ktK" firstAttribute="width" secondItem="040-Js-95N" secondAttribute="width" id="WKy-cz-w56"/>
                             <constraint firstItem="hpK-wU-Gnc" firstAttribute="leading" secondItem="B9c-Mw-fB5" secondAttribute="leading" constant="22" id="gMv-aL-Rhh"/>
                             <constraint firstItem="hpK-wU-Gnc" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" id="jDA-qG-BoC"/>
                             <constraint firstItem="hpK-wU-Gnc" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" id="job-6y-9eb"/>
+                            <constraint firstItem="qzS-Vh-ktK" firstAttribute="centerY" secondItem="040-Js-95N" secondAttribute="centerY" id="nPK-Il-Wl2"/>
+                            <constraint firstItem="qzS-Vh-ktK" firstAttribute="centerX" secondItem="040-Js-95N" secondAttribute="centerX" id="pbc-YW-2lY"/>
                             <constraint firstItem="Tbc-Pq-J03" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="319" id="smP-Qt-cna"/>
                             <constraint firstItem="040-Js-95N" firstAttribute="centerX" secondItem="B9c-Mw-fB5" secondAttribute="centerX" id="zy6-wv-Hfe"/>
                         </constraints>
@@ -933,6 +976,7 @@
                         <outlet property="addProperty" destination="cEw-tc-yIi" id="WYF-cU-oCl"/>
                         <outlet property="address" destination="JXh-B1-RJl" id="Vos-B4-63U"/>
                         <outlet property="back" destination="hpK-wU-Gnc" id="4eA-fZ-0EM"/>
+                        <outlet property="houseAvatar" destination="qzS-Vh-ktK" id="7Ui-ZS-OML"/>
                         <outlet property="inputAddress" destination="ptQ-Gi-a4G" id="8oG-0I-dUr"/>
                         <outlet property="inputRent" destination="weD-mD-HvE" id="k48-Hk-MFw"/>
                         <outlet property="rent" destination="jvE-Fy-Mwq" id="8el-RU-eWT"/>
@@ -1239,7 +1283,7 @@
         <segue reference="UCD-6U-jdD"/>
         <segue reference="JDY-oo-Q3v"/>
         <segue reference="vLw-IY-cwP"/>
-        <segue reference="gK6-Bd-YxR"/>
+        <segue reference="8C8-4g-4g2"/>
         <segue reference="K38-BR-3Ly"/>
         <segue reference="pxu-nP-1wa"/>
         <segue reference="WKe-Or-Bgs"/>
