@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RenterHome : UIViewController
+@interface RenterHome : UIViewController {
+    
+    IBOutlet UIImage *home;
+    IBOutlet UILabel *addressLabel;
+    IBOutlet UILabel *UserAddress;
+    IBOutlet UIButton *notifications;
+    IBOutlet UIButton *payment;
+    IBOutlet UIButton *issues;
+    IBOutlet UIButton *paperwork;
+
+}
 
 @end

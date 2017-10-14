@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecieveCommunicationsList : UIViewController
+@interface RecieveCommunicationsList : UIViewController {
+    
+    IBOutlet UILabel *notificatations;
+    IBOutlet UITableView *notificationTable;
+    IBOutlet UITableViewCell *cell;
+    IBOutlet UIButton *back;
+    
+}
 
 @end

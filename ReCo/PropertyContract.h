@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PropertyContract : UIViewController
+@interface PropertyContract : UIViewController {
+    
+}
 
 @end

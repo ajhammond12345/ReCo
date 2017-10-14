@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RenterPaperwork : UIViewController
+@interface RenterPaperwork : UIViewController {
+    
+    IBOutlet UILabel *paperwork;
+    IBOutlet UIButton *currentContract;
+    IBOutlet UIButton *pastContracts;
+    IBOutlet UIButton *back;
+
+}
 
 @end

@@ -8,6 +8,15 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateProperty : UIViewController
+@interface CreateProperty : UIViewController {
+    
+    IBOutlet UILabel *address;
+    IBOutlet UITextField *inputAddress;
+    IBOutlet UIButton *uploadAvatar;
+    IBOutlet UIButton *uploadPictures;
+    IBOutlet UILabel *rent;
+    IBOutlet UITextField *inputRent;
+    IBOutlet UIButton *back;
+}
 
 @end

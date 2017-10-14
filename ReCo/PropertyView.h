@@ -8,6 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PropertyView : UIViewController
+@interface PropertyView : UIViewController{
+    
+    IBOutlet UILabel *addressLabel;
+    IBOutlet UILabel *UserAddress;
+    IBOutlet UILabel *balanceDue;
+    IBOutlet UILabel *UserBalanceDue;
+    IBOutlet UIButton *renterIssues;
+    IBOutlet UIButton *contracts;
+    IBOutlet UIButton *messageRenter;
+    IBOutlet UIButton *expenses;
+    IBOutlet UIButton *back;
 
+
+
+    
+}
 @end

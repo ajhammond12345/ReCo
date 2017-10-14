@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RecieveCommunicationsSpecific : UIViewController
+@interface RecieveCommunicationsSpecific : UIViewController {
+    IBOutlet UILabel *title;
+    IBOutlet UILabel *body;
+    IBOutlet UIButton *resolve;
+    IBOutlet UIButton *back;
+}
 
 @end
