@@ -17,6 +17,7 @@
 
 -(IBAction)resolve:(id)sender;
 -(IBAction)back:(id)sender;
+@property bool isManager;
 
 
 

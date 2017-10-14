@@ -7,6 +7,8 @@
 //
 
 #import "RecieveCommunicationsList.h"
+#import "RecieveCommunicationsSpecific.h"
+
 
 @interface RecieveCommunicationsList ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,6 +28,15 @@
 /* Still need to send a parameter with this */
 -(void)toReceiveCommunicationsSpecific {
     [self performSegueWithIdentifier:@"toRecieveCommunicationsSpecific" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+
+    if ([segue.identifier isEqualToString:@"toRecieveCommunicationsSpecific"]) {
+        
+        RecieveCommunicationsSpecific *destViewController = segue.destinationViewController;
+        destViewController.isManager = _isManager;
+    }
 }
 
 

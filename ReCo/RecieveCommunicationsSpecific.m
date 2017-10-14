@@ -7,6 +7,7 @@
 //
 
 #import "RecieveCommunicationsSpecific.h"
+#import "RecieveCommunicationsList.h"
 
 @interface RecieveCommunicationsSpecific ()
 
@@ -23,6 +24,15 @@
     [self performSegueWithIdentifier:@"toReceiveCommunicationsList" sender:self];
 }
 
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([segue.identifier isEqualToString:@"toRecieveCommunicationsList"]) {
+        
+        RecieveCommunicationsList *destViewController = segue.destinationViewController;
+        destViewController.isManager = _isManager;
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
