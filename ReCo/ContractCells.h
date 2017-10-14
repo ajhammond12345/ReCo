@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "ManagerExpenses.h"
 @interface ContractCells : UITableViewCell
-
+@property Contract *contract;
 @end

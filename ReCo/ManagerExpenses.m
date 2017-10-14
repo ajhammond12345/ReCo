@@ -7,6 +7,7 @@
 //
 
 #import "ManagerExpenses.h"
+#import "ContractCells.h"
 
 @interface ManagerExpenses ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -32,6 +33,34 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
+
+
+//delegate method used to load table view
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+        ContractCells *cell = (ContractCells *)[tableView dequeueReusableCellWithIdentifier:@"contractCell" forIndexPath:indexPath];
+       cell.property = [_propertyList objectAtIndex:indexPath.row];
+        //updates the views in the cell
+        [cell updateCell];
+        
+        return cell;
+}
+
+//provides the number of rows that will be in table view (just a count of the array)
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+        
+    return _contractList.count;
+}
+
+
+
+
+
+
+
+
 
 /*
 #pragma mark - Navigation
