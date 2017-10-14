@@ -7,7 +7,8 @@
 //
 
 #import "ManagerExpenses.h"
-#import "ContractCells.h"
+#import "ExpenseCells.h"
+#import "Expense.h"
 
 @interface ManagerExpenses ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -40,10 +41,10 @@
 
 //delegate method used to load table view
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-        ContractCells *cell = (ContractCells *)[tableView dequeueReusableCellWithIdentifier:@"contractCell" forIndexPath:indexPath];
-       cell.contract = [_contractList objectAtIndex:indexPath.row];
-        //updates the views in the cell
-        [cell updateCell];
+    ExpenseCells *cell = (ExpenseCells *)[tableView dequeueReusableCellWithIdentifier:@"ExpCell" forIndexPath:indexPath];
+    cell.expense = [_expenseList objectAtIndex:indexPath.row];
+    //updates the views in the cell
+    [cell updateCell];
         
         return cell;
 }

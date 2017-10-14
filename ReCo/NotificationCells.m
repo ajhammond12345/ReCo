@@ -10,6 +10,10 @@
 
 @implementation NotificationCells
 
+-(void)updateCell {
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
