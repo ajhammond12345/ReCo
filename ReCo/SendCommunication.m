@@ -27,13 +27,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    title.delegate = self;
+    body.delegate = self;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    title.delegate = self;
-    body.delegate = self;
+   
     // Dispose of any resources that can be recreated.
 }
 

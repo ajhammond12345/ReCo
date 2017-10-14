@@ -25,13 +25,14 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    contractTable.delegate = self;
+    contractTable.dataSource = self;
     // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    contractTable.delegate = self;
-    contractTable.dataSource = self;
+    
     // Dispose of any resources that can be recreated.
 }
 
