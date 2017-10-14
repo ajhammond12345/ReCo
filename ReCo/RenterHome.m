@@ -14,7 +14,6 @@
 
 @implementation RenterHome
 
-
 -(IBAction)notifications:(id)sender{
     [self performSegueWithIdentifier:@"toReceiveCommunicationsSpecific" sender:self];
 }

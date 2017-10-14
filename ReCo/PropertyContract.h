@@ -10,9 +10,10 @@
 
 @interface PropertyContract : UIViewController {
     
-    IBOutlet UIButton back;
+    IBOutlet UIButton *back;
 }
 
 @property bool isManager;
+-(IBAction)back:(id)sender;
 
 @end

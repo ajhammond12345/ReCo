@@ -7,6 +7,8 @@
 //
 
 #import "PropertyView.h"
+#import "RecieveCommunicationsList.h"
+
 
 @interface PropertyView ()
 
@@ -29,6 +31,12 @@
 }
 -(IBAction)back:(id)sender{
     [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"toReceiveCommunicationsList"]) {
+        ReceiveCommunicationsList *destViewController = segue.destinationViewController;
+        destViewController.isManager = true;
+    }
 }
 
 

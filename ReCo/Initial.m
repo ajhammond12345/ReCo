@@ -14,9 +14,15 @@
 
 @implementation Initial
 
+-(void) isFirstTime {
+    _firstTime = true;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    [self isFirstTime];
+    
 }
 
 - (void)didReceiveMemoryWarning {
