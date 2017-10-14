@@ -8,7 +8,7 @@
 
 #import "RenterNoProperty.h"
 
-@interface RenterNoProperty ()
+@interface RenterNoProperty () <UITextFieldDelegate>
 
 @end
 
@@ -21,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    houseField.delegate = self;
     // Do any additional setup after loading the view.
 }
 
