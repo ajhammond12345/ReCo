@@ -10,6 +10,10 @@
 
 @implementation ExpenseCells
 
+-(void)updateCell {
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

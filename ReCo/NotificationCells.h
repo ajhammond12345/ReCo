@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Notification.h"
 
 @interface NotificationCells : UITableViewCell
+
+Notification *notification;
+
+-(void)updateCell;
 
 @end

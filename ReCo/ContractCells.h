@@ -10,4 +10,5 @@
 #import "Contract.h"
 @interface ContractCells : UITableViewCell
 @property Contract *contract;
+-(void)updateCell;
 @end
