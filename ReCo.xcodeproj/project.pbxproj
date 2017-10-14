@@ -20,6 +20,9 @@
 		70F9C9211F92A8690031FF0B /* Contract.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9201F92A8690031FF0B /* Contract.m */; };
 		70F9C9241F92A87E0031FF0B /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9231F92A87E0031FF0B /* Expense.m */; };
 		70F9C9271F92A8950031FF0B /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9261F92A8950031FF0B /* Notification.m */; };
+		70F9C92A1F92A9670031FF0B /* ContractCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9291F92A9670031FF0B /* ContractCells.m */; };
+		70F9C92D1F92A97B0031FF0B /* ExpenseCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C92C1F92A97B0031FF0B /* ExpenseCells.m */; };
+		70F9C9301F92A98F0031FF0B /* NotificationCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C92F1F92A98F0031FF0B /* NotificationCells.m */; };
 		E60DE8451F9211830006C5FC /* Initial.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8441F9211830006C5FC /* Initial.m */; };
 		E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8471F9211CE0006C5FC /* ManagerHome.m */; };
 		E60DE84B1F9211FA0006C5FC /* CreateProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE84A1F9211FA0006C5FC /* CreateProperty.m */; };
@@ -84,6 +87,12 @@
 		70F9C9231F92A87E0031FF0B /* Expense.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Expense.m; sourceTree = "<group>"; };
 		70F9C9251F92A8950031FF0B /* Notification.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Notification.h; sourceTree = "<group>"; };
 		70F9C9261F92A8950031FF0B /* Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
+		70F9C9281F92A9670031FF0B /* ContractCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContractCells.h; sourceTree = "<group>"; };
+		70F9C9291F92A9670031FF0B /* ContractCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContractCells.m; sourceTree = "<group>"; };
+		70F9C92B1F92A97B0031FF0B /* ExpenseCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpenseCells.h; sourceTree = "<group>"; };
+		70F9C92C1F92A97B0031FF0B /* ExpenseCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpenseCells.m; sourceTree = "<group>"; };
+		70F9C92E1F92A98F0031FF0B /* NotificationCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCells.h; sourceTree = "<group>"; };
+		70F9C92F1F92A98F0031FF0B /* NotificationCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCells.m; sourceTree = "<group>"; };
 		E60DE8431F9211830006C5FC /* Initial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initial.h; sourceTree = "<group>"; };
 		E60DE8441F9211830006C5FC /* Initial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initial.m; sourceTree = "<group>"; };
 		E60DE8461F9211CE0006C5FC /* ManagerHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerHome.h; sourceTree = "<group>"; };
@@ -172,6 +181,14 @@
 			children = (
 				7039BA641F91DCDB00A529A1 /* AppDelegate.h */,
 				7039BA651F91DCDB00A529A1 /* AppDelegate.m */,
+				70F9C92B1F92A97B0031FF0B /* ExpenseCells.h */,
+				70F9C92C1F92A97B0031FF0B /* ExpenseCells.m */,
+				70F9C92E1F92A98F0031FF0B /* NotificationCells.h */,
+				70F9C92F1F92A98F0031FF0B /* NotificationCells.m */,
+				70F9C9281F92A9670031FF0B /* ContractCells.h */,
+				70F9C9291F92A9670031FF0B /* ContractCells.m */,
+				E661EE151F9263F9004626DE /* PropertyCells.h */,
+				E661EE161F9263F9004626DE /* PropertyCells.m */,
 				70F9C91C1F92A8510031FF0B /* Property.h */,
 				70F9C91D1F92A8510031FF0B /* Property.m */,
 				70F9C91F1F92A8690031FF0B /* Contract.h */,
@@ -383,6 +400,7 @@
 				E60DE86C1F92131C0006C5FC /* RenterPayment.m in Sources */,
 				E60DE8631F9212E00006C5FC /* RenterHome.m in Sources */,
 				E661EE171F9263F9004626DE /* PropertyCells.m in Sources */,
+				70F9C92A1F92A9670031FF0B /* ContractCells.m in Sources */,
 				7039BA691F91DCDB00A529A1 /* ViewController.m in Sources */,
 				704933FA1F9298FE004DA1A0 /* Utility.m in Sources */,
 				E60DE85A1F9212930006C5FC /* RecieveCommunicationsSpecific.m in Sources */,
@@ -400,11 +418,13 @@
 				E60DE8781F922B250006C5FC /* ManagerExpenses.m in Sources */,
 				E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */,
 				70F9C91E1F92A8510031FF0B /* Property.m in Sources */,
+				70F9C9301F92A98F0031FF0B /* NotificationCells.m in Sources */,
 				E60DE85D1F9212B70006C5FC /* PropertyContract.m in Sources */,
 				E60DE8451F9211830006C5FC /* Initial.m in Sources */,
 				70F9C9241F92A87E0031FF0B /* Expense.m in Sources */,
 				E60DE8571F9212840006C5FC /* RecieveCommunicationsList.m in Sources */,
 				7039BA661F91DCDB00A529A1 /* AppDelegate.m in Sources */,
+				70F9C92D1F92A97B0031FF0B /* ExpenseCells.m in Sources */,
 				E60DE8691F92130B0006C5FC /* RenterNoProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
