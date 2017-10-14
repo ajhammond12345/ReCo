@@ -33,15 +33,13 @@
     _usernameUnique = false;
     _emailUnique = false;
     _email = EmailAddress.text;
-    _username = username.text;
-    _password = password.text;
     _name = legalName.text;
-    NSString *passwordCheck = passwordVerification.text;
+    _phoneNumber = phoneNumber.text;
     if ([_email isEqualToString:@""]
         || [_username isEqualToString:@""]
         || [_name isEqualToString:@""]
         || [_password isEqualToString:@""]
-        || [passwordCheck isEqualToString:@""]) {
+        || [_passwordCheck isEqualToString:@""]) {
         
         if ([_name isEqualToString:@""]) {
             [Utility throwAlertWithTitle:@"Missing Name" message:@"Please add your name. This is required for other users to recognize you." sender:self];
@@ -55,7 +53,7 @@
         else if ([_password isEqualToString:@""]) {
             [Utility throwAlertWithTitle:@"Missing Password" message:@"Please type your password" sender:self];
         }
-        else if ([passwordCheck isEqualToString:@""]) {
+        else if ([_passwordCheck isEqualToString:@""]) {
             [Utility throwAlertWithTitle:@"Password Verification Failed" message:@"Please retype your password." sender:self];
         }
         else {
@@ -63,7 +61,7 @@
         }
     }
     else {
-        if ([_password isEqualToString:passwordCheck]) {
+        if ([_password isEqualToString:_passwordCheck]) {
             [self uniqueUsername:_username];
             [self uniqueEmail:_email];
             [[NSNotificationCenter defaultCenter] addObserver:self
@@ -332,12 +330,13 @@
 
 
 -(IBAction)passwordNext:(id)sender {
-    //check if username is unique
+    _password = passwordTextField.text;
+    _passwordCheck = passwordVerification.text;
     [self performSegueWithIdentifier:@"toInfo" sender:self];
 }
 
 -(IBAction)usernameNext:(id)sender {
-    //check if username is unique
+    _username = usernameTextField.text;
     [self performSegueWithIdentifier:@"toPassword" sender:self];
 }
 
@@ -359,8 +358,8 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    password.delegate = self;
-    username.delegate = self;
+    passwordTextField.delegate = self;
+    usernameTextField.delegate = self;
     legalName.delegate = self;
     EmailAddress.delegate = self;
     phoneNumber.delegate = self;

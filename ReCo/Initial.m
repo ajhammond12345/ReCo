@@ -34,7 +34,7 @@
     }
     else {
         [defaults setObject:[NSNumber numberWithInt:2] forKey:@"first_login"];
-        [self performSegueWithIdentifier:@"toRegistration" sender:self];
+        [self performSegueWithIdentifier:@"toUserType" sender:self];
     }
     // Do any additional setup after loading the view.    
 }

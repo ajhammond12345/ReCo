@@ -235,7 +235,7 @@
                     <connections>
                         <segue destination="XKi-XM-s4A" kind="presentation" identifier="toRenterNoProperty" id="Lft-2b-XFC"/>
                         <segue destination="tD9-Xj-bXg" kind="presentation" identifier="toRenterHome" id="afX-Jr-UhN"/>
-                        <segue destination="qyH-Y3-q0k" kind="presentation" id="XQa-qW-UXf"/>
+                        <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="XQa-qW-UXf"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="toUserType" id="dX0-TU-mM2"/>
                     </connections>
                 </viewController>
@@ -1180,14 +1180,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ldb-3Q-RBA"/>
         <segue reference="WWv-7b-gjX"/>
         <segue reference="6cX-O3-Py1"/>
         <segue reference="nc8-Pk-zR4"/>
         <segue reference="UCD-6U-jdD"/>
         <segue reference="JDY-oo-Q3v"/>
         <segue reference="vLw-IY-cwP"/>
-        <segue reference="8C8-4g-4g2"/>
+        <segue reference="XQa-qW-UXf"/>
         <segue reference="K38-BR-3Ly"/>
         <segue reference="pxu-nP-1wa"/>
         <segue reference="WKe-Or-Bgs"/>

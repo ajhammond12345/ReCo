@@ -14,10 +14,10 @@
     IBOutlet UIButton *manager;
     IBOutlet UIButton *renter;
     IBOutlet UILabel *user;
-    IBOutlet UITextField *username;
+    IBOutlet UITextField *usernameTextField;
     IBOutlet UIButton *next;
     IBOutlet UILabel *pass;
-    IBOutlet UITextField *password;
+    IBOutlet UITextField *passwordTextField;
     IBOutlet UIButton *next1;
     IBOutlet UILabel *name;
     IBOutlet UITextField *legalName;
@@ -36,6 +36,7 @@
 @property bool isPM;
 @property NSString *username;
 @property NSString *password;
+@property NSString *passwordCheck;
 @property NSString *name;
 @property NSString *email;
 @property NSString *phoneNumber;
