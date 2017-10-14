@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface PropertyCells : UITableViewCell {
-    IBOutlet UILabel *
+    IBOutlet UILabel *address;
+    IBOutlet UIImageView *housePic;
 }
 
 @end
