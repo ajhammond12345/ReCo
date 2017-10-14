@@ -19,7 +19,7 @@
     IBOutlet UILabel *pass;
     IBOutlet UITextField *passwordTextField;
     IBOutlet UIButton *next1;
-    IBOutlet UILabel *name;
+    IBOutlet UILabel *nameLabel;
     IBOutlet UITextField *legalName;
     IBOutlet UILabel *Email;
     IBOutlet UITextField *EmailAddress;

@@ -10,6 +10,10 @@
 
 @implementation PropertyCells
 
+-(void)updateCell {
+    
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
