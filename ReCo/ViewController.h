@@ -26,9 +26,20 @@
     IBOutlet UILabel *phone;
     IBOutlet UITextField *phoneNumber;
     IBOutlet UIButton *next2;
+    IBOutlet UITextField *passwordVerification;
 }
 
+@property NSDictionary *result;
+@property NSArray *requestResult;
+@property bool usernameUnique;
+@property bool emailUnique;
 @property bool isPM;
+@property NSString *username;
+@property NSString *password;
+@property NSString *name;
+@property NSString *email;
+@property NSString *phoneNumber;
+
 -(IBAction)propertyManager:(id)sender;
 -(IBAction)tenant:(id)sender;
 

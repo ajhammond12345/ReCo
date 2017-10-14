@@ -36,9 +36,7 @@
         [defaults setObject:[NSNumber numberWithInt:2] forKey:@"first_login"];
         [self performSegueWithIdentifier:@"toRegistration" sender:self];
     }
-    // Do any additional setup after loading the view.
-    [self isFirstTime];
-    
+    // Do any additional setup after loading the view.    
 }
 
 - (void)didReceiveMemoryWarning {

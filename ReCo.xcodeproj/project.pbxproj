@@ -15,6 +15,7 @@
 		7039BA741F91DCDB00A529A1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA731F91DCDB00A529A1 /* main.m */; };
 		7039BA7E1F91DCDB00A529A1 /* ReCoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA7D1F91DCDB00A529A1 /* ReCoTests.m */; };
 		7039BA891F91DCDC00A529A1 /* ReCoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7039BA881F91DCDC00A529A1 /* ReCoUITests.m */; };
+		704933FA1F9298FE004DA1A0 /* Utility.m in Sources */ = {isa = PBXBuildFile; fileRef = 704933F91F9298FE004DA1A0 /* Utility.m */; };
 		E60DE8451F9211830006C5FC /* Initial.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8441F9211830006C5FC /* Initial.m */; };
 		E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8471F9211CE0006C5FC /* ManagerHome.m */; };
 		E60DE84B1F9211FA0006C5FC /* CreateProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE84A1F9211FA0006C5FC /* CreateProperty.m */; };
@@ -68,6 +69,8 @@
 		7039BA841F91DCDC00A529A1 /* ReCoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReCoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7039BA881F91DCDC00A529A1 /* ReCoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReCoUITests.m; sourceTree = "<group>"; };
 		7039BA8A1F91DCDC00A529A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		704933F81F9298FE004DA1A0 /* Utility.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utility.h; sourceTree = "<group>"; };
+		704933F91F9298FE004DA1A0 /* Utility.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utility.m; sourceTree = "<group>"; };
 		E60DE8431F9211830006C5FC /* Initial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initial.h; sourceTree = "<group>"; };
 		E60DE8441F9211830006C5FC /* Initial.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Initial.m; sourceTree = "<group>"; };
 		E60DE8461F9211CE0006C5FC /* ManagerHome.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ManagerHome.h; sourceTree = "<group>"; };
@@ -156,6 +159,8 @@
 				7039BA651F91DCDB00A529A1 /* AppDelegate.m */,
 				7039BA671F91DCDB00A529A1 /* ViewController.h */,
 				7039BA681F91DCDB00A529A1 /* ViewController.m */,
+				704933F81F9298FE004DA1A0 /* Utility.h */,
+				704933F91F9298FE004DA1A0 /* Utility.m */,
 				E60DE8431F9211830006C5FC /* Initial.h */,
 				E60DE8441F9211830006C5FC /* Initial.m */,
 				E60DE8461F9211CE0006C5FC /* ManagerHome.h */,
@@ -354,6 +359,7 @@
 				E60DE8631F9212E00006C5FC /* RenterHome.m in Sources */,
 				E661EE171F9263F9004626DE /* PropertyCells.m in Sources */,
 				7039BA691F91DCDB00A529A1 /* ViewController.m in Sources */,
+				704933FA1F9298FE004DA1A0 /* Utility.m in Sources */,
 				E60DE85A1F9212930006C5FC /* RecieveCommunicationsSpecific.m in Sources */,
 				7039BA741F91DCDB00A529A1 /* main.m in Sources */,
 				E60DE84E1F9212300006C5FC /* PropertyView.m in Sources */,
