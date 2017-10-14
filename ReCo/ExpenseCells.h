@@ -9,9 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "Expense.h"
 
-@interface ExpenseCells : UITableViewCell
+@interface ExpenseCells : UITableViewCell {
+    
+}
 
-Expense *expense;
+@property Expense *expense;
 -(void)updateCell;
 
 @end
