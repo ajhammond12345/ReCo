@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PastContracts : UIViewController {
+@interface PastContracts : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     
     IBOutlet UILabel *pastContracts;
     IBOutlet UITableView *contractTable;

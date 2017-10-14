@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ManagerExpenses : UIViewController {
+@interface ManagerExpenses : UIViewController <UITableViewDataSource,UITableViewDelegate>{
     
     IBOutlet UIButton *back;
     IBOutlet UILabel *expenses;

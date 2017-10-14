@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "Property.h"
 @interface PropertyCells : UITableViewCell {
     IBOutlet UILabel *address;
     IBOutlet UIImageView *housePic;
 }
-
+@porperty Property *property;
 @end

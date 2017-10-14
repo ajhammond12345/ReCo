@@ -8,7 +8,7 @@
 
 #import "CreateProperty.h"
 
-@interface CreateProperty ()
+@interface CreateProperty () <UITextFieldDelegate>
 
 @end
 
@@ -29,6 +29,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    inputAddress.delegate = self;
+    inputRent.delegate = self;
     // Do any additional setup after loading the view.
 }
 

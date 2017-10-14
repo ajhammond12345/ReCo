@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CreateProperty : UIViewController {
+@interface CreateProperty : UIViewController <UITextFieldDelegate>{
     
     IBOutlet UILabel *address;
     IBOutlet UITextField *inputAddress;

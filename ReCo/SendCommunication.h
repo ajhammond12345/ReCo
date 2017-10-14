@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SendCommunication : UIViewController {
+@interface SendCommunication : UIViewController <UITextFieldDelegate>{
     
     IBOutlet UITextField *title;
     IBOutlet UITextField *body;
