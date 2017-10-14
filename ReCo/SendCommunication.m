@@ -8,7 +8,7 @@
 
 #import "SendCommunication.h"
 
-@interface SendCommunication ()
+@interface SendCommunication () <UITextFieldDelegate>
 
 @end
 
@@ -32,6 +32,8 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+    title.delegate = self;
+    body.delegate = self;
     // Dispose of any resources that can be recreated.
 }
 
