@@ -8,6 +8,11 @@
 
 #import "PropertyView.h"
 #import "RecieveCommunicationsList.h"
+#import "PropertyContract.h"
+#import "SendCommunication.h"
+#import "SpecificPropertyExpenses.h"
+
+
 
 
 @interface PropertyView ()
@@ -18,7 +23,7 @@
 
 
 -(IBAction)renterIssues:(id)sender{
-    [self performSegueWithIdentifier:@"toReceiveCommunicationsList" sender:self];
+    [self performSegueWithIdentifier:@"toRecieveCommunicationsList" sender:self];
 }
 -(IBAction)contract:(id)sender{
     [self performSegueWithIdentifier:@"toPropertyContract" sender:self];
@@ -27,16 +32,29 @@
     [self performSegueWithIdentifier:@"toSendCommunication" sender:self];
 }
 -(IBAction)expenses:(id)sender{
-    [self performSegueWithIdentifier:@"SpecificPropertyExpenses" sender:self];
+    [self performSegueWithIdentifier:@"toSpecificPropertyExpenses" sender:self];
 }
 -(IBAction)back:(id)sender{
     [self performSegueWithIdentifier:@"toManagerHome" sender:self];
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"toReceiveCommunicationsList"]) {
-        ReceiveCommunicationsList *destViewController = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"toRecieveCommunicationsList"]) {
+        RecieveCommunicationsList *destViewController = segue.destinationViewController;
         destViewController.isManager = true;
     }
+    if ([segue.identifier isEqualToString:@"toSendCommunication"]) {
+        SendCommunication *destViewController = segue.destinationViewController;
+        destViewController.isManager = true;
+    }
+    if ([segue.identifier isEqualToString:@"toRecieveCommunicationsList"]) {
+        RecieveCommunicationsList *destViewController = segue.destinationViewController;
+        destViewController.isManager = true;
+    }
+    if ([segue.identifier isEqualToString:@"toSpecificPropertyExpenses"]) {
+        SpecificPropertyExpenses *destViewController = segue.destinationViewController;
+        destViewController.passedByExpenses = true;
+    }
+    
 }
 
 

@@ -17,9 +17,8 @@
 -(IBAction)back:(id)sender{
     if (_isManager) {
         [self performSegueWithIdentifier:@"toManagerHome" sender:self];
-
     } else {
-        [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+        [self performSegueWithIdentifier:@"toRenterPaperwork" sender:self];
     }
 }
 
