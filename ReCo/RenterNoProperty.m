@@ -31,6 +31,14 @@
     // Dispose of any resources that can be recreated.
 }
 
+
+-(int)getPropertyIdFromString:(NSString *)mystring{
+    
+    NSString *finalEight = [mystring substringFromIndex: 9];
+    NSInteger lastEight = [finalEight integerValue];
+    return lastEight;
+
+}
 /*
 #pragma mark - Navigation
 
