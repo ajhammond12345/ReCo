@@ -8,8 +8,9 @@
 #import "PropertyCells.h"
 #import "ManagerHome.h"
 #import "PastContracts.h"
+#import "Picture.h"
 
-@interface ManagerHome () <UITableViewDataSource,UITableViewDelegate>
+@interface ManagerHome () <UITableViewDataSource,UITableViewDelegate, NSURLSessionDelegate>
 
 @end
 
@@ -60,14 +61,23 @@
     
 }
 
+
+
+
+
+
+
+
+
+
 //loads all of the items
--(void)loadAllItems {
+-(void)loadAllProperties {
     
     //-- Make URL request with server to load all of the items
-    if (_items != nil) {
-        [itemsView reloadData];
+    if (_propertyList != nil) {
+        [propertyTable reloadData];
     }
-    NSString *jsonUrlString = [NSString stringWithFormat:@"https://murmuring-everglades-79720.herokuapp.com/items.json"];
+    NSString *jsonUrlString = [NSString stringWithFormat:@"https://localhost:3001/rentals.json"];
     NSURL *url = [NSURL URLWithString:jsonUrlString];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
@@ -86,32 +96,18 @@
     _result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     //NSLog(@"Result (Length: %zd) = %@",_result.count, _result);
     //this interprets the data received a creates a bunch of items from it
-    NSMutableArray *tmpItemArray = [[NSMutableArray alloc] init];
+    NSMutableArray *tmpPropertyArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < _result.count; i++) {
         NSDictionary *tmpDic = [_result objectAtIndex:i];
         //NSLog(@"Dictionary %@", tmpDic);
-        Item *loadItem = [self itemFromDictionaryExternal:tmpDic];
+        Property *loadProperty = [self loadPropertyFromDictionary:tmpDic];
         //[self loadItemImage:loadItem];
-        [tmpItemArray addObject:loadItem];
+        [tmpPropertyArray addObject:loadProperty];
     }
-    /*for (int i = 0; i <tmpItemArray.count; i++) {
-     
-     }*/
     
-    //updates the liked items list to load which of the new items the user has liked
-    [self loadLikedItems];
-    
-    //sets the 'liked' value of the loaded items
-    for (int i = 0; i < tmpItemArray.count; i++) {
-        for (int j = 0; j < _likedItems.count; j++) {
-            if ([[tmpItemArray objectAtIndex:i] getItemID] == [[_likedItems objectAtIndex:j] getItemID]) {
-                [[tmpItemArray objectAtIndex:i] setLiked:true];
-            }
-        }
-    }
     //if data receieved it saves the interpreted data to the local array
-    if (tmpItemArray != nil) {
-        _items = tmpItemArray;
+    if (tmpPropertyArray != nil) {
+        _propertyList = tmpPropertyArray;
     }
     
     else {
@@ -121,10 +117,44 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
-    [itemsView reloadData];
+    [propertyTable reloadData];
     [session invalidateAndCancel];
     
 }
+
+
+-(Property *)loadPropertyFromDictionary:(NSDictionary *)dic {
+    Property *myProp = [[Property alloc] init];
+    myProp.avatar = [dic objectForKey:@"rental_image"];
+    myProp.address = [dic objectForKey:@"rental_address"];
+    myProp.rentInCents = [[dic objectForKey:@"rental_rent"] intValue];
+    NSArray *picData = [dic objectForKey:@"pictures"];
+    NSMutableArray *pictures = [[NSMutableArray alloc] init];
+    for (int i = 0; i < picData.count; i++) {
+        Picture *newPic = [[Picture alloc] init];
+        NSDictionary *picInfo = [picData objectAtIndex:i];
+        newPic.picData = [picInfo objectForKey:@"picture_image"];
+        newPic.isBefore = [[picInfo objectForKey:@"picture_is_before"] boolValue];
+        if (newPic.isBefore) {
+            [pictures addObject:newPic];
+        }
+    }
+    myProp.beforePics = [pictures copy];
+    return myProp;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 - (void)viewDidLoad {

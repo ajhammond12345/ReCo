@@ -17,8 +17,11 @@
     IBOutlet UIButton *expenses;
     IBOutlet UIButton *contracts;
 }
+
 @property Property *propertyToSend;
 @property NSArray *propertyList;
+@property NSArray *result;
+
 -(IBAction)addProperty:(id)sender;
 -(void)toPropertyView;
 -(IBAction)expenses:(id)sender;

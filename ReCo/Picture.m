@@ -14,8 +14,7 @@
 -(void) uploadImage {
     NSError *error;
     NSMutableDictionary *tmpDic = [[NSMutableDictionary alloc] init];
-    NSData *imageData = UIImageJPEGRepresentation(_pic, .6);
-    NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
+    NSString *imageBase64 = [_picData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     //NSLog(@"Upload Data: %@", imageBase64);
     [tmpDic setObject:imageBase64 forKey:@"va_image_data"];
     [tmpDic setObject:[NSNumber numberWithBool:_isBefore] forKey:@"picture_is_before"];

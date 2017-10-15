@@ -22,6 +22,11 @@
     [self performSegueWithIdentifier:@"toManagerHome" sender:self];
 }
 
+
+
+
+
+
 //loads all of the items
 -(void)loadAllItems {
 
@@ -37,6 +42,18 @@
     [dataTask resume];
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -89,6 +106,25 @@
     [session invalidateAndCancel];
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
