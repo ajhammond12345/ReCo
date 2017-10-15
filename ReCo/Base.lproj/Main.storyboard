@@ -814,6 +814,7 @@
                         <outlet property="expensesTable" destination="GqU-Cb-Oqo" id="vRA-5g-SmD"/>
                         <segue destination="qyH-Y3-q0k" kind="presentation" identifier="toManagerHome" id="gK6-Bd-YxR"/>
                         <segue destination="EMc-Mf-BKX" kind="presentation" identifier="toSpecificPropertyExpenses" id="UCD-6U-jdD"/>
+                        <segue destination="AQV-Vt-VyR" kind="presentation" identifier="toAddExpenses" id="IKa-AB-qHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tXj-Lr-vDf" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1284,6 +1285,89 @@
             </objects>
             <point key="canvasLocation" x="5872.8000000000002" y="-540.17991004497753"/>
         </scene>
+        <!--AddExpenses-->
+        <scene sceneID="LOF-O9-mms">
+            <objects>
+                <viewController title="AddExpenses" id="AQV-Vt-VyR" customClass="AddExpense" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wjL-xd-ALq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h0e-MB-tG1">
+                                <rect key="frame" x="16" y="20" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Amount:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XaX-Nv-kMG">
+                                <rect key="frame" x="90" y="160" width="65" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fcj-yU-hXm">
+                                <rect key="frame" x="175" y="157" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reason:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bxr-Ag-fqr">
+                                <rect key="frame" x="89" y="276" width="62" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T3L-pS-tdD">
+                                <rect key="frame" x="175" y="271" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BCK-BK-JUe">
+                                <rect key="frame" x="163" y="578" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If you lost money, make sure to make the amount negative!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH0-WI-8pY">
+                                <rect key="frame" x="16" y="195" width="360" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="KMB-Cg-Ool"/>
+                    </view>
+                    <connections>
+                        <outlet property="amount" destination="fcj-yU-hXm" id="zeC-bf-G5P"/>
+                        <outlet property="back" destination="h0e-MB-tG1" id="RFr-ud-E8S"/>
+                        <outlet property="reason" destination="T3L-pS-tdD" id="8kU-dX-ZaT"/>
+                        <outlet property="submit" destination="BCK-BK-JUe" id="fqd-im-tq8"/>
+                        <segue destination="j14-dZ-fwI" kind="presentation" identifier="toManagerExpenses" id="oC6-Jr-i0A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kxc-qG-r2U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2880.8000000000002" y="2521.8890554722639"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RZI-3q-S3h">
+            <objects>
+                <viewController id="cWs-EW-8eA" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9zy-ga-KB3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="0lp-zP-IGu"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OwD-xS-cY2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
     </scenes>
     <resources>
         <image name="Screen Shot 2017-10-14 at 5.56.23 PM.png" width="474" height="314"/>
@@ -1293,7 +1377,7 @@
         <segue reference="Pal-e0-YM9"/>
         <segue reference="5pm-Fk-VYI"/>
         <segue reference="UCD-6U-jdD"/>
-        <segue reference="JDY-oo-Q3v"/>
+        <segue reference="oC6-Jr-i0A"/>
         <segue reference="vLw-IY-cwP"/>
         <segue reference="8C8-4g-4g2"/>
         <segue reference="K38-BR-3Ly"/>

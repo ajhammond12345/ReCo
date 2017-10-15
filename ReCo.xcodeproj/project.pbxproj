@@ -45,6 +45,7 @@
 		E61FBFE81F92B7C8004FDBCF /* PastContractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE71F92B7C8004FDBCF /* PastContractCell.m */; };
 		E61FBFEA1F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = E61FBFE91F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png */; };
 		E661EE171F9263F9004626DE /* PropertyCells.m in Sources */ = {isa = PBXBuildFile; fileRef = E661EE161F9263F9004626DE /* PropertyCells.m */; };
+		E6E55F3A1F92DCF700D7E564 /* AddExpense.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E55F391F92DCF700D7E564 /* AddExpense.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +141,8 @@
 		E61FBFE91F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-10-14 at 5.56.23 PM.png"; path = "../../../../Desktop/Screen Shot 2017-10-14 at 5.56.23 PM.png"; sourceTree = "<group>"; };
 		E661EE151F9263F9004626DE /* PropertyCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyCells.h; sourceTree = "<group>"; };
 		E661EE161F9263F9004626DE /* PropertyCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyCells.m; sourceTree = "<group>"; };
+		E6E55F381F92DCF700D7E564 /* AddExpense.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddExpense.h; sourceTree = "<group>"; };
+		E6E55F391F92DCF700D7E564 /* AddExpense.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddExpense.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -222,6 +225,8 @@
 				E60DE84A1F9211FA0006C5FC /* CreateProperty.m */,
 				E60DE84C1F9212300006C5FC /* PropertyView.h */,
 				E60DE84D1F9212300006C5FC /* PropertyView.m */,
+				E6E55F381F92DCF700D7E564 /* AddExpense.h */,
+				E6E55F391F92DCF700D7E564 /* AddExpense.m */,
 				E61FBFE01F92B3B4004FDBCF /* ExpensesCells.h */,
 				E61FBFE11F92B3B4004FDBCF /* ExpensesCells.m */,
 				E61FBFE31F92B73D004FDBCF /* NotificationsCell.h */,
@@ -436,6 +441,7 @@
 				E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */,
 				E60DE8781F922B250006C5FC /* ManagerExpenses.m in Sources */,
 				E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */,
+				E6E55F3A1F92DCF700D7E564 /* AddExpense.m in Sources */,
 				70F9C91E1F92A8510031FF0B /* Property.m in Sources */,
 				70F9C9301F92A98F0031FF0B /* NotificationCells.m in Sources */,
 				E60DE85D1F9212B70006C5FC /* PropertyContract.m in Sources */,
