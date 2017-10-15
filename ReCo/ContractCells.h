@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Contract.h"
 @interface ContractCells : UITableViewCell {
-    
+    IBOutlet UILabel *date;
 }
 
 @property Contract *contract;

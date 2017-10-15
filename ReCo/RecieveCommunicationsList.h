@@ -16,9 +16,12 @@
     
 }
 
+
 -(IBAction)back:(id)sender;
 -(void)toReceiveCommunicationsSpecific;
 @property bool isManager;
+@property NSArray *notificationsList;
+@property Notification *notificationToSend;
 
 
 @end

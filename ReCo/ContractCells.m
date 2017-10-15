@@ -11,7 +11,7 @@
 @implementation ContractCells
 
 -(void) updateCell {
-    
+    date.text = _contract.dateSigned;
 }
 
 - (void)awakeFromNib {

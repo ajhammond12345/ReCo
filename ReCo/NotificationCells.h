@@ -9,7 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "Notification.h"
 
-@interface NotificationCells : UITableViewCell
+@interface NotificationCells : UITableViewCell {
+    IBOutlet UILabel *title;
+    IBOutlet UILabel *text;
+}
 
 @property Notification *notification;
 

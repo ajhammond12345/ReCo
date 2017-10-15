@@ -22,7 +22,6 @@
 		70F9C9241F92A87E0031FF0B /* Expense.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9231F92A87E0031FF0B /* Expense.m */; };
 		70F9C9271F92A8950031FF0B /* Notification.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9261F92A8950031FF0B /* Notification.m */; };
 		70F9C92A1F92A9670031FF0B /* ContractCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C9291F92A9670031FF0B /* ContractCells.m */; };
-		70F9C92D1F92A97B0031FF0B /* ExpenseCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C92C1F92A97B0031FF0B /* ExpenseCells.m */; };
 		70F9C9301F92A98F0031FF0B /* NotificationCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 70F9C92F1F92A98F0031FF0B /* NotificationCells.m */; };
 		E60DE8451F9211830006C5FC /* Initial.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8441F9211830006C5FC /* Initial.m */; };
 		E60DE8481F9211CE0006C5FC /* ManagerHome.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8471F9211CE0006C5FC /* ManagerHome.m */; };
@@ -41,7 +40,6 @@
 		E60DE86F1F92132C0006C5FC /* RenterActualPayments.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE86E1F92132C0006C5FC /* RenterActualPayments.m */; };
 		E60DE8781F922B250006C5FC /* ManagerExpenses.m in Sources */ = {isa = PBXBuildFile; fileRef = E60DE8771F922B250006C5FC /* ManagerExpenses.m */; };
 		E61FBFE21F92B3B4004FDBCF /* ExpensesCells.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE11F92B3B4004FDBCF /* ExpensesCells.m */; };
-		E61FBFE51F92B73D004FDBCF /* NotificationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE41F92B73D004FDBCF /* NotificationsCell.m */; };
 		E61FBFE81F92B7C8004FDBCF /* PastContractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE71F92B7C8004FDBCF /* PastContractCell.m */; };
 		E661EE171F9263F9004626DE /* PropertyCells.m in Sources */ = {isa = PBXBuildFile; fileRef = E661EE161F9263F9004626DE /* PropertyCells.m */; };
 		E6E55F3A1F92DCF700D7E564 /* AddExpense.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E55F391F92DCF700D7E564 /* AddExpense.m */; };
@@ -95,8 +93,6 @@
 		70F9C9261F92A8950031FF0B /* Notification.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Notification.m; sourceTree = "<group>"; };
 		70F9C9281F92A9670031FF0B /* ContractCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ContractCells.h; sourceTree = "<group>"; };
 		70F9C9291F92A9670031FF0B /* ContractCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ContractCells.m; sourceTree = "<group>"; };
-		70F9C92B1F92A97B0031FF0B /* ExpenseCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpenseCells.h; sourceTree = "<group>"; };
-		70F9C92C1F92A97B0031FF0B /* ExpenseCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpenseCells.m; sourceTree = "<group>"; };
 		70F9C92E1F92A98F0031FF0B /* NotificationCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationCells.h; sourceTree = "<group>"; };
 		70F9C92F1F92A98F0031FF0B /* NotificationCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationCells.m; sourceTree = "<group>"; };
 		E60DE8431F9211830006C5FC /* Initial.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Initial.h; sourceTree = "<group>"; };
@@ -133,8 +129,6 @@
 		E60DE8771F922B250006C5FC /* ManagerExpenses.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagerExpenses.m; sourceTree = "<group>"; };
 		E61FBFE01F92B3B4004FDBCF /* ExpensesCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExpensesCells.h; sourceTree = "<group>"; };
 		E61FBFE11F92B3B4004FDBCF /* ExpensesCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExpensesCells.m; sourceTree = "<group>"; };
-		E61FBFE31F92B73D004FDBCF /* NotificationsCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationsCell.h; sourceTree = "<group>"; };
-		E61FBFE41F92B73D004FDBCF /* NotificationsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationsCell.m; sourceTree = "<group>"; };
 		E61FBFE61F92B7C8004FDBCF /* PastContractCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PastContractCell.h; sourceTree = "<group>"; };
 		E61FBFE71F92B7C8004FDBCF /* PastContractCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastContractCell.m; sourceTree = "<group>"; };
 		E661EE151F9263F9004626DE /* PropertyCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyCells.h; sourceTree = "<group>"; };
@@ -193,8 +187,6 @@
 			children = (
 				7039BA641F91DCDB00A529A1 /* AppDelegate.h */,
 				7039BA651F91DCDB00A529A1 /* AppDelegate.m */,
-				70F9C92B1F92A97B0031FF0B /* ExpenseCells.h */,
-				70F9C92C1F92A97B0031FF0B /* ExpenseCells.m */,
 				70F9C92E1F92A98F0031FF0B /* NotificationCells.h */,
 				70F9C92F1F92A98F0031FF0B /* NotificationCells.m */,
 				70F9C9281F92A9670031FF0B /* ContractCells.h */,
@@ -227,8 +219,6 @@
 				E6E55F391F92DCF700D7E564 /* AddExpense.m */,
 				E61FBFE01F92B3B4004FDBCF /* ExpensesCells.h */,
 				E61FBFE11F92B3B4004FDBCF /* ExpensesCells.m */,
-				E61FBFE31F92B73D004FDBCF /* NotificationsCell.h */,
-				E61FBFE41F92B73D004FDBCF /* NotificationsCell.m */,
 				E61FBFE61F92B7C8004FDBCF /* PastContractCell.h */,
 				E61FBFE71F92B7C8004FDBCF /* PastContractCell.m */,
 				E60DE84F1F92124C0006C5FC /* SpecificPropertyExpenses.h */,
@@ -444,9 +434,7 @@
 				E60DE8451F9211830006C5FC /* Initial.m in Sources */,
 				70F9C9241F92A87E0031FF0B /* Expense.m in Sources */,
 				E60DE8571F9212840006C5FC /* RecieveCommunicationsList.m in Sources */,
-				E61FBFE51F92B73D004FDBCF /* NotificationsCell.m in Sources */,
 				7039BA661F91DCDB00A529A1 /* AppDelegate.m in Sources */,
-				70F9C92D1F92A97B0031FF0B /* ExpenseCells.m in Sources */,
 				E60DE8691F92130B0006C5FC /* RenterNoProperty.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

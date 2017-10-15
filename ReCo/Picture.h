@@ -14,5 +14,6 @@
 }
 
 @property UIImage *pic;
+@property bool isBefore;
 
 @end

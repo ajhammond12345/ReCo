@@ -11,7 +11,8 @@
 @implementation NotificationCells
 
 -(void)updateCell {
-    
+    title.text = _notification.title;
+    text.text = _notification.text;
 }
 
 - (void)awakeFromNib {

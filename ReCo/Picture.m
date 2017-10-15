@@ -18,6 +18,7 @@
     NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
     //NSLog(@"Upload Data: %@", imageBase64);
     [tmpDic setObject:imageBase64 forKey:@"va_image_data"];
+    [tmpDic setObject:[NSNumber numberWithBool:_isBefore] forKey:@"picture_is_before"];
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpDic options:NSJSONWritingPrettyPrinted error:&error];
     //logs the data to check if it is created successfully
     NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
