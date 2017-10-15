@@ -7,12 +7,26 @@
 //
 
 #import "PastContracts.h"
+#import "ContractCells.h"
 
 @interface PastContracts () <UITableViewDelegate, UITableViewDataSource>
 
 @end
 
 @implementation PastContracts
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    ContractCells *cell = (ContractCells *)[tableView dequeueReusableCellWithIdentifier:@"PastContractCell" forIndexPath:indexPath];
+    cell.contract = [_contractList objectAtIndex:indexPath.row];
+    //updates the views in the cell
+    [cell updateCell];
+    return cell;
+}
+
+//provides the number of rows that will be in table view (just a count of the array)
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _contractList.count;
+}
 
 -(IBAction)back:(id)sender;{
     if (_isManager) {

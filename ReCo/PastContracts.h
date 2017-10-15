@@ -17,5 +17,6 @@
 
 -(IBAction)back:(id)sender;
 @property bool isManager;
+@property NSArray *contractList;
 
 @end
