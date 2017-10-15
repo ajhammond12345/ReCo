@@ -112,7 +112,7 @@
                     <connections>
                         <outlet property="next" destination="dr1-vB-Ugp" id="xad-QM-FqG"/>
                         <outlet property="user" destination="GOd-Zn-Mbw" id="bvW-vI-XX4"/>
-                        <outlet property="username" destination="ShT-XP-jfx" id="Bhm-Im-tqd"/>
+                        <outlet property="usernameTextField" destination="ShT-XP-jfx" id="oXM-BO-kix"/>
                         <segue destination="hc1-oh-qDI" kind="presentation" identifier="toPassword" id="zZd-W7-pIS"/>
                     </connections>
                 </viewController>
@@ -173,7 +173,8 @@
                     </view>
                     <connections>
                         <outlet property="next1" destination="mu1-Yu-e6P" id="b45-CF-5m4"/>
-                        <outlet property="password" destination="qJx-V7-ec0" id="ZLu-Yh-xfv"/>
+                        <outlet property="passwordTextField" destination="qJx-V7-ec0" id="j5k-WC-3X2"/>
+                        <outlet property="passwordVerification" destination="3Qn-1p-g5U" id="jLt-u3-Ui0"/>
                         <segue destination="JRi-C5-UnK" kind="presentation" identifier="toInfo" id="88I-5P-TKz"/>
                     </connections>
                 </viewController>
@@ -250,7 +251,6 @@
                         <outlet property="Email" destination="Tm4-07-nzT" id="JPb-Be-awc"/>
                         <outlet property="EmailAddress" destination="JfV-74-t6T" id="LEu-3x-gYr"/>
                         <outlet property="legalName" destination="IBO-sT-BFu" id="6iT-k0-Kab"/>
-                        <outlet property="name" destination="b84-DQ-tyw" id="b0D-c8-aqs"/>
                         <outlet property="next2" destination="ing-zI-0wl" id="iHJ-tL-Ng3"/>
                         <outlet property="phone" destination="BwM-5x-PqN" id="reg-Gj-hCk"/>
                         <outlet property="phoneNumber" destination="7Cs-8P-fuU" id="dOC-RX-7kg"/>
@@ -1397,7 +1397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esP-XO-FCc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1749.5999999999999" y="-1261.6191904047978"/>
+            <point key="canvasLocation" x="1750" y="-1263"/>
         </scene>
         <!--RenterPaperwork-->
         <scene sceneID="vDb-Jt-anc">
@@ -1548,8 +1548,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="WWv-7b-gjX"/>
-        <segue reference="6cX-O3-Py1"/>
-        <segue reference="XCB-9f-fGH"/>
+        <segue reference="Pal-e0-YM9"/>
+        <segue reference="nc8-Pk-zR4"/>
         <segue reference="UCD-6U-jdD"/>
         <segue reference="oC6-Jr-i0A"/>
         <segue reference="Cot-Iq-tak"/>

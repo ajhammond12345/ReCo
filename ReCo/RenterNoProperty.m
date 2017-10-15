@@ -16,6 +16,7 @@
 
 
 -(IBAction)continues:(id)sender {
+    //check if it is valid, save locally the property
     [self performSegueWithIdentifier:@"toRenterHome" sender:self];
 }
 
