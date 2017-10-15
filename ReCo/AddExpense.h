@@ -17,7 +17,7 @@
 
 -(IBAction)back:(id)sender;
 -(IBAction)submit:(id)sender;
-@property int *amount;
+@property int amount;
 @property NSString *reason;
 
 @end

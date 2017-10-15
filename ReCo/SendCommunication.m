@@ -63,7 +63,7 @@
         Notification *newNotification = [[Notification alloc] init];
         newNotification.title = _title1;
         newNotification.text = _body;
-        [newProperty setLocalDictionary];
+        [newNotification setLocalDictionary];
         //creates error handler
         NSError *error;
         
