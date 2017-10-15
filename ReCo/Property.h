@@ -21,6 +21,8 @@
 @property NSArray *beforePics;
 @property NSDictionary *localDictionary;
 
++(Property *)loadPropertyFromDictionary:(NSDictionary *)dic;
+
 
 
 @end
