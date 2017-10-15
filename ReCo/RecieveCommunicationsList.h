@@ -23,6 +23,7 @@
 @property bool isManager;
 @property NSArray *notificationsList;
 @property Notification *notificationToSend;
+@property NSArray *result;
 
 
 @end

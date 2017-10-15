@@ -17,6 +17,8 @@
 @property NSString *dateExpired;
 @property int propertyId;
 @property NSDictionary *localDictionary;
+
 -(void)setLocalDictionary;
+
 
 @end
