@@ -10,4 +10,8 @@
 
 @implementation Contract
 
+-(void)setLocalDictionary {
+    _localDictionary = [NSDictionary dictionaryWithObjectsAndKeys:_dateSigned, @"contract_date_signed", _dateExpired, @"contract_date_expired",[NSNumber numberWithBool:true], @"contract_is_signed", [NSNumber numberWithInt:_propertyId], @"contract_propery_id", nil];
+}
+
 @end

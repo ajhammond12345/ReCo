@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 UIImage *file;
 @interface Contract : NSObject
+
 @property bool isSigned;
-@property int dateSigned;
-@property int dateExpired;
+@property NSString *dateSigned;
+@property NSString *dateExpired;
 @property int propertyId;
+@property NSDictionary *localDictionary
+
 @end

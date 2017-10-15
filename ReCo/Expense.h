@@ -8,6 +8,11 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Expense : NSObject
+@interface Expense : NSObject {
+    
+}
 
+@property int amount;
+@property NSString *reason;
+@property NSDictionary *localDictionary;
 @end
