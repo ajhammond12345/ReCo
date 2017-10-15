@@ -34,6 +34,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yzz-7t-Ecu">
                                 <rect key="frame" x="119" y="533" width="138" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Or Property Renter?"/>
                                 <connections>
                                     <action selector="tenant:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Z4-5z-CvP"/>
@@ -42,17 +43,22 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2017-10-14 at 5.56.23 PM.png" translatesAutoresizingMaskIntoConstraints="NO" id="Rj1-dA-shw">
                                 <rect key="frame" x="67" y="34" width="240" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CLm-8g-7Lu">
                                 <rect key="frame" x="122" y="378" width="132" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Property Manager?"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Property Manager?">
+                                    <color key="titleColor" red="0.97951566690000003" green="0.97794804310000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="propertyManager:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yod-bW-Tuq"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.87125277076779795" green="1" blue="0.94641525701431051" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.96289620069067428" green="1" blue="0.94743089284714088" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="1" green="0.99991976417873996" blue="0.88086196545540574" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -91,13 +97,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dr1-vB-Ugp">
                                 <rect key="frame" x="259" y="259" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="usernameNext:" destination="SNi-Dc-yEI" eventType="touchUpInside" id="avS-6f-9S6"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.99991976419999995" blue="0.88086196549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="sdk-3H-LSv"/>
                     </view>
                     <connections>
@@ -150,13 +159,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mu1-Yu-e6P">
                                 <rect key="frame" x="171" y="608" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="passwordNext:" destination="hc1-oh-qDI" eventType="touchUpInside" id="2m0-xy-nEJ"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.99991976419999995" blue="0.88086196549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="A48-de-k0E"/>
                     </view>
                     <connections>
@@ -222,13 +234,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ing-zI-0wl">
                                 <rect key="frame" x="133" y="573" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Make My Profile!"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Make My Profile!">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="makeMyProfile:" destination="JRi-C5-UnK" eventType="touchUpInside" id="zok-cQ-bYn"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.99991976419999995" blue="0.88086196549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="Xs6-Zl-Thn"/>
                     </view>
                     <connections>
@@ -388,12 +403,16 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMJ-7Z-azL">
-                                <rect key="frame" x="169" y="318" width="36" height="30"/>
+                                <rect key="frame" x="154" y="314" width="67" height="39"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.99991976419999995" blue="0.88086196549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6K9-6A-Vdx"/>
                     </view>
                     <connections>
@@ -1043,25 +1062,37 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="65l-if-7b0">
                                 <rect key="frame" x="144" y="139" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Notifications"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Notifications">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RV-bl-Wei">
                                 <rect key="frame" x="165" y="318" width="44" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Issues"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Issues">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fau-AA-DdS">
                                 <rect key="frame" x="157" y="227" width="60" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Payment"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Payment">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W6E-86-hTb">
                                 <rect key="frame" x="151" y="409" width="73" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Paperwork"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Paperwork">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.99991976419999995" blue="0.88086196549999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="MjK-yb-YoS"/>
                     </view>
                     <connections>
@@ -1374,12 +1405,12 @@
         <image name="Screen Shot 2017-10-14 at 5.56.23 PM.png" width="474" height="314"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Fy7-Re-CBe"/>
+        <segue reference="WWv-7b-gjX"/>
         <segue reference="Pal-e0-YM9"/>
-        <segue reference="5pm-Fk-VYI"/>
+        <segue reference="mbk-s3-HUv"/>
         <segue reference="UCD-6U-jdD"/>
         <segue reference="oC6-Jr-i0A"/>
-        <segue reference="vLw-IY-cwP"/>
+        <segue reference="RGn-Bg-VKJ"/>
         <segue reference="8C8-4g-4g2"/>
         <segue reference="K38-BR-3Ly"/>
         <segue reference="pxu-nP-1wa"/>
