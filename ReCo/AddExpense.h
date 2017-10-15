@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface AddExpense : UIViewController {
-    IBOutlet UITextField *date;
     IBOutlet UITextField *amount;
     IBOutlet UITextField *reason;
     IBOutlet UIButton *submit;
