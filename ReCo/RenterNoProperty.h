@@ -14,9 +14,13 @@
     IBOutlet UIButton *uploadContractButton;
     IBOutlet UILabel *uploadContractLabel;
     IBOutlet UIButton *continues;
+
 }
 
 -(IBAction)continues:(id)sender;
+-(IBAction)uploadContract:(id)sender;
+
+
 @end
 
 

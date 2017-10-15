@@ -8,7 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Contract.h"
-@interface ContractCells : UITableViewCell
+@interface ContractCells : UITableViewCell {
+    
+}
+
 @property Contract *contract;
+
 -(void)updateCell;
+
 @end

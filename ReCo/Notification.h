@@ -8,6 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Notification : NSObject
+@interface Notification : NSObject {
+    
+}
+
+@property NSString *title;
+@property NSString *text;
+@property NSDictionary *localDictionary;
+
 
 @end
+
+
