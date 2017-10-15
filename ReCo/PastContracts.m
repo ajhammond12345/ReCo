@@ -37,6 +37,44 @@
     
 }
 
+-(void)uploadComment:(NSString *)comment {
+    [_comments addObject:comment];
+    NSError *error;
+    
+    //creates mutable copy of the dictionary to remove extra keys
+    NSMutableDictionary *tmpDic = [NSMutableDictionary dictionaryWithObject:comment forKey:@"comment_text"];
+    [tmpDic setObject:[NSString stringWithFormat:@"%zd", _itemID]forKey:@"item_id"];
+    
+    //converts the dictionary to json
+    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpDic options:NSJSONWritingPrettyPrinted error:&error];
+    //logs the data to check if it is created successfully
+    //NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
+    
+    //creates url for the request
+    NSURL *url = [NSURL URLWithString:@"https://murmuring-everglades-79720.herokuapp.com/comments.json"];
+    
+    //creates a URL request
+    NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
+    
+    //specifics for the request (it is a post request with json content)
+    [uploadRequest setHTTPMethod:@"POST"];
+    [uploadRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [uploadRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    [uploadRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
+    [uploadRequest setHTTPBody: jsonData];
+    
+    //
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    
+    [[session dataTaskWithRequest:uploadRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+            NSLog(@"requestReply: %@", requestReply);
+        });
+    }] resume];
+    //add the comment to the server
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     contractTable.delegate = self;
