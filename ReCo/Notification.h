@@ -17,6 +17,7 @@
 @property NSDictionary *localDictionary;
 
 -(void)setLocalDictionary;
+-(Notification *)loadNotificationFromDictionary:(NSDictionary *)dic;
 
 
 @end
