@@ -10,6 +10,12 @@
 
 @implementation PropertyCells
 
+-(void)updateCell {
+    address.text = _property.address;
+    rent.text = [NSString stringWithFormat:@"%i", _property.rentInCents];
+    housePic.image = _property.avatar;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

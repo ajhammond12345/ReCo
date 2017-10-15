@@ -7,7 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface Property : NSObject
+@interface Property : NSObject {
+    
+}
+
+-(void)setPropertyDictionary;
+
+@property UIImage *avatar;
+@property NSString *address;
+@property int rentInCents;
+@property NSArray *beforePics;
+@property NSDictionary *localDictionary;
+
+
 
 @end

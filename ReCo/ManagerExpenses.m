@@ -45,14 +45,12 @@
     cell.expense = [_expenseList objectAtIndex:indexPath.row];
     //updates the views in the cell
     [cell updateCell];
-        
-        return cell;
+    return cell;
 }
 
 //provides the number of rows that will be in table view (just a count of the array)
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-        
-    return _contractList.count;
+    return _expenseList.count;
 }
 
 
