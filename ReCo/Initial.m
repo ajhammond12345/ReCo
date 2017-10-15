@@ -22,6 +22,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    // Do any additional setup after loading the view.    
+}
+
+-(void) viewDidAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *firstLogin = [defaults objectForKey:@"first_login"];
     int userType = [self getUserType];
@@ -36,7 +41,6 @@
         [defaults setObject:[NSNumber numberWithInt:2] forKey:@"first_login"];
         [self performSegueWithIdentifier:@"toUserType" sender:self];
     }
-    // Do any additional setup after loading the view.    
 }
 
 - (void)didReceiveMemoryWarning {
