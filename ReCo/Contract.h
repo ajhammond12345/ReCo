@@ -7,13 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-UIImage *file;
+#import <UIKit/UIKit.h>
+
 @interface Contract : NSObject
 
+@property UIImage *file;
 @property bool isSigned;
 @property NSString *dateSigned;
 @property NSString *dateExpired;
 @property int propertyId;
-@property NSDictionary *localDictionary
+@property NSDictionary *localDictionary;
 
 @end
