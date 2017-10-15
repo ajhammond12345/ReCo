@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Contract.h"
 
 @interface PastContracts : UIViewController <UITableViewDelegate, UITableViewDataSource>{
     
@@ -18,5 +19,8 @@
 -(IBAction)back:(id)sender;
 @property bool isManager;
 @property NSArray *contractList;
+@property NSArray *result;
+@property Contract *contractToSend;
+
 
 @end

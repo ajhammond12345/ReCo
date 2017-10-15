@@ -9,7 +9,9 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface Contract : NSObject
+@interface Contract : NSObject {
+    
+}
 
 @property UIImage *file;
 @property bool isSigned;

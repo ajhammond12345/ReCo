@@ -38,13 +38,13 @@
 }
 
 //loads all of the items
--(void)loadAllItems {
+-(void)loadAllContracts {
     
     //-- Make URL request with server to load all of the items
-    if (_items != nil) {
-        [itemsView reloadData];
+    if (_contractList != nil) {
+        [contractTable reloadData];
     }
-    NSString *jsonUrlString = [NSString stringWithFormat:@"https://murmuring-everglades-79720.herokuapp.com/items.json"];
+    NSString *jsonUrlString = [NSString stringWithFormat:@"https://localhost:3001/Contracts.json"];
     NSURL *url = [NSURL URLWithString:jsonUrlString];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
@@ -63,32 +63,19 @@
     _result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     //NSLog(@"Result (Length: %zd) = %@",_result.count, _result);
     //this interprets the data received a creates a bunch of items from it
-    NSMutableArray *tmpItemArray = [[NSMutableArray alloc] init];
+    NSMutableArray *tmpContractArray = [[NSMutableArray alloc] init];
     for (int i = 0; i < _result.count; i++) {
         NSDictionary *tmpDic = [_result objectAtIndex:i];
         //NSLog(@"Dictionary %@", tmpDic);
-        Item *loadItem = [self itemFromDictionaryExternal:tmpDic];
+        Contract *loadContract = [self loadContractFromDictionary:tmpDic];
         //[self loadItemImage:loadItem];
-        [tmpItemArray addObject:loadItem];
+        [tmpContractArray addObject:loadContract];
     }
-    /*for (int i = 0; i <tmpItemArray.count; i++) {
-     
-     }*/
     
-    //updates the liked items list to load which of the new items the user has liked
-    [self loadLikedItems];
     
-    //sets the 'liked' value of the loaded items
-    for (int i = 0; i < tmpItemArray.count; i++) {
-        for (int j = 0; j < _likedItems.count; j++) {
-            if ([[tmpItemArray objectAtIndex:i] getItemID] == [[_likedItems objectAtIndex:j] getItemID]) {
-                [[tmpItemArray objectAtIndex:i] setLiked:true];
-            }
-        }
-    }
     //if data receieved it saves the interpreted data to the local array
-    if (tmpItemArray != nil) {
-        _items = tmpItemArray;
+    if (tmpContractArray != nil) {
+        _contractList = tmpContractArray;
     }
     
     else {
@@ -98,7 +85,7 @@
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
     }
-    [itemsView reloadData];
+    [contractTable reloadData];
     [session invalidateAndCancel];
     
 }
@@ -114,6 +101,15 @@
     [super didReceiveMemoryWarning];
     
     // Dispose of any resources that can be recreated.
+}
+
+-(Contract *)loadContractFromDictionary:(NSDictionary *)dic{
+    Contract *myContract = [[Contract alloc] init];
+    myContract.dateSigned = [dic objectForKey:(@"contract_date_signed")];
+    myContract.dateExpired = [dic objectForKey:(@"contract_date_expired")];
+    myContract.isSigned = [[dic objectForKey:@"contract_is_signed"] boolValue];
+    myContract.propertyId = [[dic objectForKey:(@"contract_property_id")] intValue];
+    return myContract;
 }
 
 /*
