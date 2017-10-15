@@ -10,4 +10,8 @@
 
 @implementation Expense
 
+-(void)setLocalDictionary {
+    _localDictionary = [NSDictionary dictionaryWithObjectsAndKeys:_reason, @"expense_reason", [NSNumber numberWithInt:_amount], @"expense_amount", nil];
+}
+
 @end

@@ -10,4 +10,11 @@
 
 @implementation Notification
 
+-(void)setLocalDictionary {
+    _localDictionary = [NSDictionary dictionaryWithObjectsAndKeys:_title, @"notification_title", _text, @"notification_text", nil];
+}
+
+
+
+
 @end
