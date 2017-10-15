@@ -34,7 +34,7 @@
     _emailUnique = false;
     _email = EmailAddress.text;
     _name = legalName.text;
-    _phoneNumber = phoneNumber.text;
+    _phoneNumber = phoneNumberTextField.text;
     if ([_email isEqualToString:@""]
         || [_username isEqualToString:@""]
         || [_name isEqualToString:@""]
@@ -366,7 +366,7 @@
     usernameTextField.delegate = self;
     legalName.delegate = self;
     EmailAddress.delegate = self;
-    phoneNumber.delegate = self;
+    phoneNumberTextField.delegate = self;
     // Dispose of any resources that can be recreated.
 }
 
