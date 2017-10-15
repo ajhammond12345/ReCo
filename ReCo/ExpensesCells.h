@@ -7,12 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Expense.h"
 
 @interface ExpensesCells : UITableViewCell{
     IBOutlet UILabel *amount;
-    IBOutlet UILabel *address;
     IBOutlet UILabel *date;
 
 }
+
+@property Expense *expense;
 
 @end

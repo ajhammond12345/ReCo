@@ -106,7 +106,7 @@
         Expense *newExpense = [[Expense alloc] init];
         newExpense.amount = _amount;
         newExpense.reason = _reason;
-        [newProperty setLocalDictionary];
+        [newExpense setLocalDictionary];
         //creates error handler
         NSError *error;
         

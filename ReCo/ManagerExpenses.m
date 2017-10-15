@@ -40,6 +40,10 @@
 
 
 //delegate method used to load table view
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ExpenseCells *tmpCell = [expensesTable cellForRowAtIndexPath:indexPath];
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ExpenseCells *cell = (ExpenseCells *)[tableView dequeueReusableCellWithIdentifier:@"ExpCell" forIndexPath:indexPath];
     cell.expense = [_expenseList objectAtIndex:indexPath.row];

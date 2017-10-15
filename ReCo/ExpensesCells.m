@@ -10,6 +10,11 @@
 
 @implementation ExpensesCells
 
+-(void)updateCell {
+    amount.text = [NSString stringWithFormat:@"%i",_expense.amount];
+    amount.text = [NSString stringWithFormat:@"%i",_expense.amount];
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code

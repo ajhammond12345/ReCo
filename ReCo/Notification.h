@@ -16,6 +16,8 @@
 @property NSString *text;
 @property NSDictionary *localDictionary;
 
+-(void)setLocalDictionary;
+
 
 @end
 

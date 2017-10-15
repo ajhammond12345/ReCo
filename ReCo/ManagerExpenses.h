@@ -16,6 +16,7 @@
 }
 
 @property NSArray *expenseList;
+@property Expense *expenseToSend;
 -(void)toSpecificPropertyExpenses;
 -(IBAction)back:(id)sender;
 

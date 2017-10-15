@@ -15,4 +15,6 @@
 @property int amount;
 @property NSString *reason;
 @property NSDictionary *localDictionary;
+
+-(void)setLocalDictionary;
 @end

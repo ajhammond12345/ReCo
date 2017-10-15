@@ -34,7 +34,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     PropertyCells *tmpCell = [propertyTable cellForRowAtIndexPath:indexPath];
         _propertyToSend = tmpCell.property;
-        [self performSegueWithIdentifier:@"showItem" sender:indexPath];
+        [self performSegueWithIdentifier:@"toPropertyView" sender:indexPath];
     }
 
 //delegate method used to load table view
