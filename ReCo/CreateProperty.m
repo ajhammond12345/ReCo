@@ -73,6 +73,7 @@
         int count = [imageCount intValue];
         [self saveImage:tmpImage withFileName:[NSString stringWithFormat:@"beforePhoto%i",count] ofType:@"jpg" inDirectory:documentsDirectory];
         [_beforePhotos addObject:UIImagePNGRepresentation(tmpImage)];
+        [picker dismissViewControllerAnimated:YES completion:NULL];
     }
     
 }

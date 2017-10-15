@@ -219,7 +219,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Cs-8P-fuU">
-                                <rect key="frame" x="96" y="467" width="188" height="30"/>
+                                <rect key="frame" x="93" y="467" width="188" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -253,7 +253,7 @@
                         <outlet property="legalName" destination="IBO-sT-BFu" id="6iT-k0-Kab"/>
                         <outlet property="next2" destination="ing-zI-0wl" id="iHJ-tL-Ng3"/>
                         <outlet property="phone" destination="BwM-5x-PqN" id="reg-Gj-hCk"/>
-                        <outlet property="phoneNumber" destination="7Cs-8P-fuU" id="dOC-RX-7kg"/>
+                        <outlet property="phoneNumberTextField" destination="7Cs-8P-fuU" id="lKm-fa-DgF"/>
                         <segue destination="t0X-GI-Dse" kind="presentation" identifier="toInitial" id="k1W-zP-Zg1"/>
                     </connections>
                 </viewController>
@@ -1029,13 +1029,13 @@
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qzS-Vh-ktK">
-                                <rect key="frame" x="121" y="196" width="145" height="128"/>
+                                <rect key="frame" x="108" y="195" width="160" height="142"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="qzS-Vh-ktK" secondAttribute="height" multiplier="145:128" id="MWZ-1p-kJ6"/>
+                                    <constraint firstAttribute="width" secondItem="qzS-Vh-ktK" secondAttribute="height" multiplier="80:71" id="8Ng-Gc-nqP"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="040-Js-95N">
-                                <rect key="frame" x="115" y="245" width="160" height="43"/>
+                                <rect key="frame" x="108" y="245" width="160" height="43"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Upload House Avatar">
                                     <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1044,18 +1044,8 @@
                                     <action selector="addAvatarPhoto:" destination="h44-ZF-WjY" eventType="touchUpInside" id="Vgr-K0-yxn"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbc-Pq-J03">
-                                <rect key="frame" x="132" y="339" width="128" height="43"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Upload Pictures">
-                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="addBeforePhoto:" destination="h44-ZF-WjY" eventType="touchUpInside" id="6Ee-NF-z6S"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvE-Fy-Mwq">
-                                <rect key="frame" x="93" y="128" width="40" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvE-Fy-Mwq">
+                                <rect key="frame" x="93" y="129" width="40" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1085,23 +1075,34 @@
                                     <action selector="addProperty:" destination="h44-ZF-WjY" eventType="touchUpInside" id="A5u-Xz-MCY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tbc-Pq-J03">
+                                <rect key="frame" x="124" y="345" width="128" height="43"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Upload Pictures">
+                                    <color key="titleColor" red="0.9882278283" green="1" blue="0.99677148950000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="addBeforePhoto:" destination="h44-ZF-WjY" eventType="touchUpInside" id="6Ee-NF-z6S"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61529477700000001" green="1" blue="0.71584581759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="JXh-B1-RJl" firstAttribute="leading" secondItem="B9c-Mw-fB5" secondAttribute="leading" constant="22" id="2x2-As-idk"/>
                             <constraint firstItem="jvE-Fy-Mwq" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="109" id="8rI-vb-Gky"/>
                             <constraint firstItem="040-Js-95N" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="225" id="Iny-Xv-Awu"/>
-                            <constraint firstItem="jvE-Fy-Mwq" firstAttribute="leading" secondItem="B9c-Mw-fB5" secondAttribute="leading" constant="22" id="KKL-2S-7Ka"/>
-                            <constraint firstItem="Tbc-Pq-J03" firstAttribute="centerX" secondItem="B9c-Mw-fB5" secondAttribute="centerX" id="Kbq-KN-SXx"/>
+                            <constraint firstItem="jvE-Fy-Mwq" firstAttribute="leading" secondItem="B9c-Mw-fB5" secondAttribute="leading" constant="93" id="KKL-2S-7Ka"/>
                             <constraint firstItem="JXh-B1-RJl" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="63" id="Om6-VM-ULn"/>
+                            <constraint firstItem="qzS-Vh-ktK" firstAttribute="centerX" secondItem="B9c-Mw-fB5" secondAttribute="centerX" id="QZQ-Hd-Bor"/>
                             <constraint firstItem="qzS-Vh-ktK" firstAttribute="width" secondItem="040-Js-95N" secondAttribute="width" id="WKy-cz-w56"/>
+                            <constraint firstItem="Tbc-Pq-J03" firstAttribute="centerX" secondItem="qzS-Vh-ktK" secondAttribute="centerX" id="dTD-YT-vAA"/>
                             <constraint firstItem="hpK-wU-Gnc" firstAttribute="leading" secondItem="B9c-Mw-fB5" secondAttribute="leading" constant="22" id="gMv-aL-Rhh"/>
                             <constraint firstItem="hpK-wU-Gnc" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" id="jDA-qG-BoC"/>
                             <constraint firstItem="hpK-wU-Gnc" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" id="job-6y-9eb"/>
                             <constraint firstItem="qzS-Vh-ktK" firstAttribute="centerY" secondItem="040-Js-95N" secondAttribute="centerY" id="nPK-Il-Wl2"/>
                             <constraint firstItem="qzS-Vh-ktK" firstAttribute="centerX" secondItem="040-Js-95N" secondAttribute="centerX" id="pbc-YW-2lY"/>
-                            <constraint firstItem="Tbc-Pq-J03" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="319" id="smP-Qt-cna"/>
-                            <constraint firstItem="040-Js-95N" firstAttribute="centerX" secondItem="B9c-Mw-fB5" secondAttribute="centerX" id="zy6-wv-Hfe"/>
+                            <constraint firstItem="Tbc-Pq-J03" firstAttribute="top" secondItem="B9c-Mw-fB5" secondAttribute="top" constant="325" id="smP-Qt-cna"/>
+                            <constraint firstItem="qzS-Vh-ktK" firstAttribute="width" secondItem="AzV-pA-r9Z" secondAttribute="width" multiplier="160:375" id="vSN-Ka-A3p"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="B9c-Mw-fB5"/>
                     </view>

@@ -135,6 +135,7 @@
                 [defaults setObject:_password forKey:@"password"];
                 [defaults setObject:[_result objectForKey:@"user_name"] forKey:@"name"];
                 [defaults setObject:[_result objectForKey:@"email_address"] forKey:@"email"];
+                [self performSegueWithIdentifier:@"toInfo" sender:self];
                 
                 //transitions back to page it came from (property booleans needed here
             }
@@ -143,7 +144,7 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:@"signUpVerified"
                                                   object:nil];
-    [self performSegueWithIdentifier:@"toInfo" sender:self];
+    
 }
 
 //assumes non-nil and preprocessed (checked to verify actually resembles an email address) email given
@@ -199,11 +200,9 @@
                 if (_requestResult.count < 1) {
                     NSLog(@"Verified email is Unique");
                     _emailUnique = true;
-                    if (_usernameUnique && _emailUnique) {
-                        [[NSNotificationCenter defaultCenter] postNotificationName:@"signUpVerified"
-                                                                            object:self
-                                                                          userInfo:nil];
-                    }
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self performSegueWithIdentifier:@"toPassword" sender:self];
+                    });
                     //SHOW EMAIL IS VALID SOMEWHERE IN UI
                 }
                 else {
@@ -277,10 +276,10 @@
                 if (_requestResult.count < 1) {
                     NSLog(@"Verified username is Unique");
                     _usernameUnique = true;
-                    if (_usernameUnique && _emailUnique) {
-                        [[NSNotificationCenter defaultCenter] postNotificationName:@"signUpVerified" object:self userInfo:nil];
-                    }
-                    //SHOW USERNAME IS VALID SOMEWHERE IN UI
+                    dispatch_async(dispatch_get_main_queue(), ^{
+                        [self performSegueWithIdentifier:@"toPassword" sender:self];
+                    });
+                    
                 }
                 else {
                     [Utility throwAlertWithTitle:@"Username already in use" message:@"Please choose a different username" sender:self];
@@ -332,12 +331,17 @@
 -(IBAction)passwordNext:(id)sender {
     _password = passwordTextField.text;
     _passwordCheck = passwordVerification.text;
-    [self performSegueWithIdentifier:@"toInfo" sender:self];
+    if ([_password isEqualToString:_passwordCheck]) {
+        [self performSegueWithIdentifier:@"toInfo" sender:self];
+    }
+    else {
+        [Utility throwAlertWithTitle:@"Failed Password Verification\n" message:@"Your passwords do not match. Please try again." sender: self];
+    }
 }
 
 -(IBAction)usernameNext:(id)sender {
     _username = usernameTextField.text;
-    [self performSegueWithIdentifier:@"toPassword" sender:self];
+    [self uniqueUsername:_username];
 }
 
 -(IBAction)propertyManager:(id)sender {

@@ -24,7 +24,7 @@
     IBOutlet UILabel *Email;
     IBOutlet UITextField *EmailAddress;
     IBOutlet UILabel *phone;
-    IBOutlet UITextField *phoneNumber;
+    IBOutlet UITextField *phoneNumberTextField;
     IBOutlet UIButton *next2;
     IBOutlet UITextField *passwordVerification;
 }
