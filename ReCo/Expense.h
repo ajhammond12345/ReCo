@@ -17,4 +17,5 @@
 @property NSDictionary *localDictionary;
 
 -(void)setLocalDictionary;
+-(void)loadExpenseFromDictionary:(NSDictionary *)dic;
 @end

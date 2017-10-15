@@ -16,5 +16,6 @@
 }
 
 @property Expense *expense;
+-(void)updateCell;
 
 @end
