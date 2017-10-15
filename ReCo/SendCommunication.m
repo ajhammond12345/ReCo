@@ -29,6 +29,8 @@
     [super viewDidLoad];
     title.delegate = self;
     body.delegate = self;
+    send.layer.cornerRadius = 5.0;
+    send.layer.masksToBounds = YES;
     // Do any additional setup after loading the view.
 }
 
