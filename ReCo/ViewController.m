@@ -30,11 +30,10 @@
     //closes all keyboards
     [self.view endEditing:YES];
     
-    _usernameUnique = false;
     _emailUnique = false;
     _email = EmailAddress.text;
     _name = legalName.text;
-    _phoneNumber = phoneNumber.text;
+    _phoneNumber = phoneNumberTextField.text;
     if ([_email isEqualToString:@""]
         || [_username isEqualToString:@""]
         || [_name isEqualToString:@""]
@@ -44,34 +43,18 @@
         if ([_name isEqualToString:@""]) {
             [Utility throwAlertWithTitle:@"Missing Name" message:@"Please add your name. This is required for other users to recognize you." sender:self];
         }
-        else if ([_username isEqualToString:@""]) {
-            [Utility throwAlertWithTitle:@"Missing Name" message:@"Please add your name. This is required for other users to recognize you." sender:self];
-        }
         else if ([_email isEqualToString:@""]) {
             [Utility throwAlertWithTitle:@"Missing Email" message:@"Please add your email." sender:self];
         }
-        else if ([_password isEqualToString:@""]) {
-            [Utility throwAlertWithTitle:@"Missing Password" message:@"Please type your password" sender:self];
-        }
-        else if ([_passwordCheck isEqualToString:@""]) {
-            [Utility throwAlertWithTitle:@"Password Verification Failed" message:@"Please retype your password." sender:self];
+        else if ([_phoneNumber isEqualToString:@""]) {
+            [Utility throwAlertWithTitle:@"Missing Phone Number" message:@"Please add your phone number." sender:self];
         }
         else {
             [Utility throwAlertWithTitle:@"Missing Information" message:@"Please ensure you typed all of your information." sender:self];
         }
     }
     else {
-        if ([_password isEqualToString:_passwordCheck]) {
-            [self uniqueUsername:_username];
-            [self uniqueEmail:_email];
-            [[NSNotificationCenter defaultCenter] addObserver:self
-                                                     selector:@selector(addAccount)
-                                                         name:@"signUpVerified"
-                                                       object:nil];
-        }
-        else {
-            [Utility throwAlertWithTitle:@"Passwords Don't Match" message:@"Please retype your password." sender:self];
-        }
+       [self uniqueEmail:_email];
     }
     //creates an empty dictionary for data to be added
 }
@@ -135,16 +118,12 @@
                 [defaults setObject:_password forKey:@"password"];
                 [defaults setObject:[_result objectForKey:@"user_name"] forKey:@"name"];
                 [defaults setObject:[_result objectForKey:@"email_address"] forKey:@"email"];
-                [self performSegueWithIdentifier:@"toInfo" sender:self];
+                [self performSegueWithIdentifier:@"toInitial" sender:self];
                 
                 //transitions back to page it came from (property booleans needed here
             }
         });
     }] resume];
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:@"signUpVerified"
-                                                  object:nil];
-    
 }
 
 //assumes non-nil and preprocessed (checked to verify actually resembles an email address) email given
@@ -200,9 +179,7 @@
                 if (_requestResult.count < 1) {
                     NSLog(@"Verified email is Unique");
                     _emailUnique = true;
-                    dispatch_async(dispatch_get_main_queue(), ^{
-                        [self performSegueWithIdentifier:@"toPassword" sender:self];
-                    });
+                    [self addAccount];
                     //SHOW EMAIL IS VALID SOMEWHERE IN UI
                 }
                 else {
@@ -325,10 +302,16 @@
  [defaults setObject:[_result objectForKey:@"user_address"] forKey:@"address"];
  [defaults setObject:[_result objectForKey:@"email_address"] forKey:@"email"];*/
 
+-(bool) textFieldShouldReturn:(UITextField *)textField {
+    [self.view endEditing:YES];
+    return true;
+}
+
 
 
 
 -(IBAction)passwordNext:(id)sender {
+    [self.view endEditing:YES];
     _password = passwordTextField.text;
     _passwordCheck = passwordVerification.text;
     if ([_password isEqualToString:_passwordCheck]) {
@@ -340,6 +323,7 @@
 }
 
 -(IBAction)usernameNext:(id)sender {
+    [self.view endEditing:YES];
     _username = usernameTextField.text;
     [self uniqueUsername:_username];
 }
@@ -355,6 +339,12 @@
 }
 
 - (void)viewDidLoad {
+    usernameTextField.delegate = self;
+    passwordTextField.delegate = self;
+    passwordVerification.delegate = self;
+    legalName.delegate = self;
+    EmailAddress.delegate = self;
+    phoneNumberTextField.delegate = self;
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 }
@@ -366,7 +356,7 @@
     usernameTextField.delegate = self;
     legalName.delegate = self;
     EmailAddress.delegate = self;
-    phoneNumber.delegate = self;
+    phoneNumberTextField.delegate = self;
     // Dispose of any resources that can be recreated.
 }
 

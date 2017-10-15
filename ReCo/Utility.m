@@ -25,6 +25,12 @@
     [sender presentViewController:alert animated:YES completion:nil];
 }
 
++(void)setUserType:(int)type {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    NSNumber *newType = [NSNumber numberWithInt:type];
+    [defaults setObject:newType forKey:@"user_type"];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

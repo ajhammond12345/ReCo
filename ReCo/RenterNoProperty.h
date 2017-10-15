@@ -14,8 +14,11 @@
     IBOutlet UIButton *uploadContractButton;
     IBOutlet UILabel *uploadContractLabel;
     IBOutlet UIButton *continues;
+    IBOutlet UIImageView *contractImage;
 
 }
+
+@property NSMutableArray *contractImages;
 
 -(IBAction)continues:(id)sender;
 -(IBAction)uploadContract:(id)sender;

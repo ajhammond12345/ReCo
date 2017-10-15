@@ -31,10 +31,16 @@
     NSNumber *firstLogin = [defaults objectForKey:@"first_login"];
     int userType = [self getUserType];
     if ([firstLogin isEqualToNumber: [NSNumber numberWithInt:2]]) {
-        switch (userType) {
-            case 0: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
-            case 1: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
-            case 2: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
+        if ([defaults objectForKey:@"user_id"] != nil) {
+            switch (userType) {
+                case 0: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+                case 1: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+                case 2: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
+                default: [self performSegueWithIdentifier:@"toUserType" sender:self];
+            }
+        }
+        else {
+            [self performSegueWithIdentifier:@"toUserType" sender:self];
         }
     }
     else {
