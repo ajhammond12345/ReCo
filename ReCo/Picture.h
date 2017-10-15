@@ -7,13 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
 @interface Picture : NSObject {
     
 }
 
-@property UIImage *pic;
+@property NSData *picData;
 @property bool isBefore;
 
 @end
