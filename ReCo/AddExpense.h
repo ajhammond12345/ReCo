@@ -9,14 +9,15 @@
 #import <UIKit/UIKit.h>
 
 @interface AddExpense : UIViewController {
-    IBOutlet UITextField *amount;
-    IBOutlet UITextField *reason;
+    IBOutlet UITextField *amountInput;
+    IBOutlet UITextField *reasonInput;
     IBOutlet UIButton *submit;
     IBOutlet UIButton *back;
 }
 
 -(IBAction)back:(id)sender;
 -(IBAction)submit:(id)sender;
-
+@property int *amount;
+@property NSString *reason;
 
 @end

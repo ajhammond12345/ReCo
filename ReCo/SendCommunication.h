@@ -10,15 +10,20 @@
 
 @interface SendCommunication : UIViewController <UITextFieldDelegate>{
     
-    IBOutlet UITextField *title;
-    IBOutlet UITextField *body;
+    IBOutlet UITextField *titleInput;
+    IBOutlet UITextField *bodyInput;
     IBOutlet UIButton *send;
     IBOutlet UIButton *back;
 }
 
 @property bool isManager;
+
+
 -(IBAction)back:(id)sender;
 -(IBAction)send:(id)sender;
+@property NSString *title1;
+@property NSString *body;
+
 
 
 @end

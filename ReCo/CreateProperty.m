@@ -166,7 +166,7 @@
         if ([_address isEqualToString:@""]) {
             errorMessage = @"Please put in an address for the rental unit";
         }
-        else if (rent == 0) {
+        else if (_rentInCents == 0) {
             errorMessage = @"Please input a rent value for this house";
         }
         else {
@@ -205,7 +205,7 @@
         NSData *imageData = UIImageJPEGRepresentation(newProperty.avatar, .6);
         NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
         //NSLog(@"Upload Data: %@", imageBase64);
-        [tmpDic setObject:imageBase64 forKey:@"va_image_data"];;
+        [tmpDic setObject:imageBase64 forKey:@"va_image_data"];
         
         //JSON Upload - does not upload the image
         //converts the dictionary to json
@@ -216,9 +216,8 @@
         //creates url for the request
         
         //production url
-        NSURL *url = [NSURL URLWithString:@"https://murmuring-everglades-79720.herokuapp.com/items.json"];
+        NSURL *url = [NSURL URLWithString:@"https://localhost:3001/rentals.json"];
         //testing url
-        //NSURL *url = [NSURL URLWithString:@"http://localhost:3001/items.json"];
         
         //creates a URL request
         NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
