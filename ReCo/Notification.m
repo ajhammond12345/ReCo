@@ -18,7 +18,9 @@
     Notification *myNotification = [[Notification alloc] init];
     myNotification.title = [dic objectForKey:(@"notification_title")];
     myNotification.text = [dic objectForKey:(@"notification_text")];
+    return myNotification;
 }
+
 
 
 

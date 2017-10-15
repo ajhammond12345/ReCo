@@ -109,7 +109,7 @@
     
     //if data receieved it saves the interpreted data to the local array
     if (tmpNotificationArray != nil) {
-        _notificationList = tmpNotificationArray;
+        _notificationsList = tmpNotificationArray;
     }
     
     else {
