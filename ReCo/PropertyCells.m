@@ -11,9 +11,9 @@
 @implementation PropertyCells
 
 -(void)updateCell {
-    address.text = property.address;
-    rent.text = property.rent;
-    housePic = property.image;
+    address.text = _property.address;
+    rent.text = [NSString stringWithFormat:@"%i", _property.rentInCents];
+    housePic.image = _property.avatar;
 }
 
 - (void)awakeFromNib {

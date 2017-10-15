@@ -43,7 +43,6 @@
 		E61FBFE21F92B3B4004FDBCF /* ExpensesCells.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE11F92B3B4004FDBCF /* ExpensesCells.m */; };
 		E61FBFE51F92B73D004FDBCF /* NotificationsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE41F92B73D004FDBCF /* NotificationsCell.m */; };
 		E61FBFE81F92B7C8004FDBCF /* PastContractCell.m in Sources */ = {isa = PBXBuildFile; fileRef = E61FBFE71F92B7C8004FDBCF /* PastContractCell.m */; };
-		E61FBFEA1F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = E61FBFE91F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png */; };
 		E661EE171F9263F9004626DE /* PropertyCells.m in Sources */ = {isa = PBXBuildFile; fileRef = E661EE161F9263F9004626DE /* PropertyCells.m */; };
 		E6E55F3A1F92DCF700D7E564 /* AddExpense.m in Sources */ = {isa = PBXBuildFile; fileRef = E6E55F391F92DCF700D7E564 /* AddExpense.m */; };
 /* End PBXBuildFile section */
@@ -138,7 +137,6 @@
 		E61FBFE41F92B73D004FDBCF /* NotificationsCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationsCell.m; sourceTree = "<group>"; };
 		E61FBFE61F92B7C8004FDBCF /* PastContractCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PastContractCell.h; sourceTree = "<group>"; };
 		E61FBFE71F92B7C8004FDBCF /* PastContractCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PastContractCell.m; sourceTree = "<group>"; };
-		E61FBFE91F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2017-10-14 at 5.56.23 PM.png"; path = "../../../../Desktop/Screen Shot 2017-10-14 at 5.56.23 PM.png"; sourceTree = "<group>"; };
 		E661EE151F9263F9004626DE /* PropertyCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PropertyCells.h; sourceTree = "<group>"; };
 		E661EE161F9263F9004626DE /* PropertyCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PropertyCells.m; sourceTree = "<group>"; };
 		E6E55F381F92DCF700D7E564 /* AddExpense.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddExpense.h; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 				E60DE86A1F92131C0006C5FC /* RenterPayment.h */,
 				E60DE86B1F92131C0006C5FC /* RenterPayment.m */,
 				7039BA6A1F91DCDB00A529A1 /* Main.storyboard */,
-				E61FBFE91F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png */,
 				7039BA6D1F91DCDB00A529A1 /* Assets.xcassets */,
 				7039BA6F1F91DCDB00A529A1 /* LaunchScreen.storyboard */,
 				7039BA721F91DCDB00A529A1 /* Info.plist */,
@@ -393,7 +390,6 @@
 			files = (
 				7039BA711F91DCDB00A529A1 /* LaunchScreen.storyboard in Resources */,
 				7039BA6E1F91DCDB00A529A1 /* Assets.xcassets in Resources */,
-				E61FBFEA1F92C0A5004FDBCF /* Screen Shot 2017-10-14 at 5.56.23 PM.png in Resources */,
 				7039BA6C1F91DCDB00A529A1 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +611,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KAEW2AKT6X;
 				INFOPLIST_FILE = ReCo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testing.ReCo;
@@ -628,6 +625,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KAEW2AKT6X;
 				INFOPLIST_FILE = ReCo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = testing.ReCo;

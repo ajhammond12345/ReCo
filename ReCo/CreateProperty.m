@@ -202,11 +202,10 @@
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSNumber *userID = [defaults objectForKey:@"user_id"];
         [tmpDic setObject:userID forKey:@"user_id"];
-        NSData *imageData = UIImageJPEGRepresentation(image, .6);
+        NSData *imageData = UIImageJPEGRepresentation(newProperty.avatar, .6);
         NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
         //NSLog(@"Upload Data: %@", imageBase64);
-        [tmpDic setObject:imageBase64 forKey:@"va_image_data"];
-        [tmpDic setObject:[NSString stringWithFormat:@"%i", 0] forKey:@"item_purchase_state"];
+        [tmpDic setObject:imageBase64 forKey:@"va_image_data"];;
         
         //JSON Upload - does not upload the image
         //converts the dictionary to json
@@ -248,19 +247,7 @@
                     [self presentViewController:alert animated:YES completion:nil];
                 }
                 else {
-                    //opens user defaults to save data locally
-                    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-                    NSArray *donatedArray = [defaults objectForKey:@"DonatedItems"];
-                    NSMutableArray *tmpDonatedItems = [[NSMutableArray alloc] init];
-                    //creates array with all of the saved items
-                    for (int i = 0; i < donatedArray.count; i++) {
-                        NSDictionary *tmpDic = [donatedArray objectAtIndex:i];
-                        [tmpDonatedItems addObject:[self itemFromDictionaryInternal:tmpDic]];
-                    }
-                    //adds the new item to the donated list
-                    [tmpDonatedItems addObject:[self itemFromDictionaryInternal:newItem.localDictionary]];
-                    //transitions to the thank you page
-                    [self performSegueWithIdentifier:@"showDonationThankYou" sender:(self)];
+                    [self performSegueWithIdentifier:@"toManagerHome" sender:self];
                 }
             });
         }] resume];
@@ -269,10 +256,6 @@
 
 
 -(IBAction)back:(id)sender{
-    [self performSegueWithIdentifier:@"toManagerHome" sender:self];
-
-}
--(IBAction)addProperty:(id)sender{
     [self performSegueWithIdentifier:@"toManagerHome" sender:self];
 
 }
