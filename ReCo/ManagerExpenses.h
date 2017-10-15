@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Expense.h"
 
 @interface ManagerExpenses : UIViewController <UITableViewDataSource,UITableViewDelegate>{
     

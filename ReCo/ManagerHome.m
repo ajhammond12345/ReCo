@@ -60,42 +60,70 @@
     
 }
 
--(void)uploadComment:(NSString *)comment {
-    [_comments addObject:comment];
+//loads all of the items
+-(void)loadAllItems {
+    
+    //-- Make URL request with server to load all of the items
+    if (_items != nil) {
+        [itemsView reloadData];
+    }
+    NSString *jsonUrlString = [NSString stringWithFormat:@"https://murmuring-everglades-79720.herokuapp.com/items.json"];
+    NSURL *url = [NSURL URLWithString:jsonUrlString];
+    NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
+    NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];
+    [dataTask resume];
+    
+}
+
+
+//loads all of the items when the data task is complete
+- (void)URLSession:(NSURLSession *)session
+          dataTask:(NSURLSessionDataTask *)dataTask
+    didReceiveData:(NSData *)data {
+    
     NSError *error;
-
-    //creates mutable copy of the dictionary to remove extra keys
-    NSMutableDictionary *tmpDic = [NSMutableDictionary dictionaryWithObject:comment forKey:@"comment_text"];
-    [tmpDic setObject:[NSString stringWithFormat:@"%zd", _itemID]forKey:@"item_id"];
-
-    //converts the dictionary to json
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpDic options:NSJSONWritingPrettyPrinted error:&error];
-    //logs the data to check if it is created successfully
-    //NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-
-    //creates url for the request
-    NSURL *url = [NSURL URLWithString:@"https://murmuring-everglades-79720.herokuapp.com/comments.json"];
-
-    //creates a URL request
-    NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
-
-    //specifics for the request (it is a post request with json content)
-    [uploadRequest setHTTPMethod:@"POST"];
-    [uploadRequest setValue:@"application/json" forHTTPHeaderField:@"Accept"];
-    [uploadRequest setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
-    [uploadRequest setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[jsonData length]] forHTTPHeaderField:@"Content-Length"];
-    [uploadRequest setHTTPBody: jsonData];
-
-    //
-    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-
-    [[session dataTaskWithRequest:uploadRequest completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        dispatch_async(dispatch_get_main_queue(), ^{
-            NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-            NSLog(@"requestReply: %@", requestReply);
-            });
-        }] resume];
-    //add the comment to the server
+    _result = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
+    //NSLog(@"Result (Length: %zd) = %@",_result.count, _result);
+    //this interprets the data received a creates a bunch of items from it
+    NSMutableArray *tmpItemArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < _result.count; i++) {
+        NSDictionary *tmpDic = [_result objectAtIndex:i];
+        //NSLog(@"Dictionary %@", tmpDic);
+        Item *loadItem = [self itemFromDictionaryExternal:tmpDic];
+        //[self loadItemImage:loadItem];
+        [tmpItemArray addObject:loadItem];
+    }
+    /*for (int i = 0; i <tmpItemArray.count; i++) {
+     
+     }*/
+    
+    //updates the liked items list to load which of the new items the user has liked
+    [self loadLikedItems];
+    
+    //sets the 'liked' value of the loaded items
+    for (int i = 0; i < tmpItemArray.count; i++) {
+        for (int j = 0; j < _likedItems.count; j++) {
+            if ([[tmpItemArray objectAtIndex:i] getItemID] == [[_likedItems objectAtIndex:j] getItemID]) {
+                [[tmpItemArray objectAtIndex:i] setLiked:true];
+            }
+        }
+    }
+    //if data receieved it saves the interpreted data to the local array
+    if (tmpItemArray != nil) {
+        _items = tmpItemArray;
+    }
+    
+    else {
+        //if no data received it provides this alert
+        UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Connection\n" message:@"Could not load items" preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {}];
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+    }
+    [itemsView reloadData];
+    [session invalidateAndCancel];
+    
 }
 
 
