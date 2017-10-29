@@ -99,6 +99,10 @@
     // Do any additional setup after loading the view.
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    //TODO: Check and see if user is already tied to apartment, if so segue to tennat with apartment screen
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
@@ -108,8 +112,9 @@
 -(int)getPropertyIdFromString:(NSString *)mystring{
     
     NSString *finalEight = [mystring substringFromIndex: 9];
-    NSInteger lastEight = [finalEight integerValue];
+    int lastEight = [finalEight intValue];
     return lastEight;
+    
 
 }
 /*

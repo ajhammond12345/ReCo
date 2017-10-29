@@ -332,11 +332,15 @@
 
 -(IBAction)propertyManager:(id)sender {
     _isPM = true;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSNumber numberWithInt:1] forKey:@"user_type"];
     [self performSegueWithIdentifier:@"toUsername" sender:self];
 }
 
 -(IBAction)tenant:(id)sender {
     _isPM = false;
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSNumber numberWithInt:2] forKey:@"user_type"];
     [self performSegueWithIdentifier:@"toUsername" sender:self];
 }
 

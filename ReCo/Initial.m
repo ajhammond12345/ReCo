@@ -26,14 +26,15 @@
     // Do any additional setup after loading the view.    
 }
 
--(void) viewDidAppear:(BOOL)animated {
+-(void)viewWillAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int userType = [self getUserType];
     if ([defaults objectForKey:@"user_id"] != nil) {
         switch (userType) {
-            case 0: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
-            case 1: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
-            case 2: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
+            case 1: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+            case 2: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+            case 3: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
+            case 4: [self performSegueWithIdentifier:@"toUserType" sender:self];
             default: [self performSegueWithIdentifier:@"toUserType" sender:self];
         }
     }
