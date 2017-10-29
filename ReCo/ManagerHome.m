@@ -18,7 +18,7 @@
 
 -(IBAction)logout:(id)sender {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    [defaults setObject:[NSString stringWithFormat:@"%i", 3] forKey:@"user_type"];
+    [defaults setObject:[NSString stringWithFormat:@"%i", 4] forKey:@"user_type"];
     [self performSegueWithIdentifier:@"logout" sender:self];
 }
 

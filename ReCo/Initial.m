@@ -17,7 +17,7 @@
 -(int)getUserType {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     NSNumber *userType = [defaults objectForKey:@"user_type"];
-    return (int)userType;
+    return [userType intValue];
 }
 
 - (void)viewDidLoad {
@@ -26,15 +26,15 @@
     // Do any additional setup after loading the view.    
 }
 
--(void)viewWillAppear:(BOOL)animated {
+-(void) viewDidAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     int userType = [self getUserType];
-    if ([defaults objectForKey:@"user_id"] != nil) {
+    if ([defaults objectForKey:@"user_type"] != nil) {
+        NSLog(@"User Type%i", userType);
         switch (userType) {
             case 1: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
             case 2: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
             case 3: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
-            case 4: [self performSegueWithIdentifier:@"toUserType" sender:self];
             default: [self performSegueWithIdentifier:@"toUserType" sender:self];
         }
     }

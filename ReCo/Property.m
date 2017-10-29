@@ -9,6 +9,8 @@
 #import "Property.h"
 
 @implementation Property
+
+//TODO: add load property from dictionary method
     
 
 -(void)setPropertyDictionary {
@@ -19,8 +21,9 @@
         
     }
     //NSLog(@"Purchase State: %@", purchaseState);
-    if (imageData == nil)
+    if (imageData == nil) {
         imageData = [[NSData alloc] init];
+    }
     
     //NSLog(@"These Can't Be NULL: %@, %@, %@", imageData, commentsCopy, likedData);
     _localDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:

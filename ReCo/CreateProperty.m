@@ -199,7 +199,7 @@
         
         //removes extra keys (item_image is replaced with a different key for the image data)
         [tmpDic removeObjectForKey:@"id"];
-        [tmpDic removeObjectForKey:@"item_image"];
+        [tmpDic removeObjectForKey:@"rental_image"];
         NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
         NSNumber *userID = [defaults objectForKey:@"user_id"];
         [tmpDic setObject:userID forKey:@"user_id"];
@@ -207,6 +207,7 @@
         NSString *imageBase64 = [imageData base64EncodedStringWithOptions:NSDataBase64EncodingEndLineWithLineFeed];
         //NSLog(@"Upload Data: %@", imageBase64);
         [tmpDic setObject:imageBase64 forKey:@"va_image_data"];
+        
         
         //JSON Upload - does not upload the image
         //converts the dictionary to json
