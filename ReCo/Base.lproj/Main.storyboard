@@ -666,6 +666,10 @@
                                     <action selector="expenses:" destination="qyH-Y3-q0k" eventType="touchUpInside" id="62y-Lp-YIv"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Reu-Vr-EqT">
+                                <rect key="frame" x="16" y="28" width="55" height="30"/>
+                                <state key="normal" title="Log Out"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61529477700000001" green="1" blue="0.71584581759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -676,11 +680,13 @@
                             <constraint firstItem="VHv-Be-XRY" firstAttribute="centerX" secondItem="DjV-bA-OYl" secondAttribute="centerX" id="BWl-JQ-Zz9"/>
                             <constraint firstItem="Jq0-hQ-tYx" firstAttribute="top" secondItem="DjV-bA-OYl" secondAttribute="top" constant="597" id="FFC-BE-B1t"/>
                             <constraint firstItem="RK6-K1-Jcc" firstAttribute="height" secondItem="Uu5-1D-B9O" secondAttribute="height" multiplier="542:667" id="N7v-k7-pql"/>
+                            <constraint firstItem="Reu-Vr-EqT" firstAttribute="leading" secondItem="DjV-bA-OYl" secondAttribute="leading" constant="16" id="ZVj-wu-88H"/>
                             <constraint firstItem="RK6-K1-Jcc" firstAttribute="top" secondItem="VHv-Be-XRY" secondAttribute="bottom" constant="12" id="eNO-3w-Ww1"/>
                             <constraint firstItem="Gao-h8-DeL" firstAttribute="top" secondItem="DjV-bA-OYl" secondAttribute="top" constant="597" id="eR4-vZ-OMW"/>
                             <constraint firstItem="Mnz-5l-kam" firstAttribute="centerY" secondItem="VHv-Be-XRY" secondAttribute="centerY" id="j6J-jl-xpv"/>
                             <constraint firstItem="VHv-Be-XRY" firstAttribute="leading" secondItem="DjV-bA-OYl" secondAttribute="leading" constant="128" id="pUe-5C-dvl"/>
                             <constraint firstItem="DjV-bA-OYl" firstAttribute="top" secondItem="Mnz-5l-kam" secondAttribute="top" constant="5" id="qDu-Qh-daF"/>
+                            <constraint firstItem="Reu-Vr-EqT" firstAttribute="top" secondItem="DjV-bA-OYl" secondAttribute="top" constant="8" id="uAv-fv-3sT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DjV-bA-OYl"/>
                     </view>
@@ -1559,7 +1565,6 @@
         <image name="Image" width="158" height="104"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ldb-3Q-RBA"/>
         <segue reference="WWv-7b-gjX"/>
         <segue reference="Pal-e0-YM9"/>
         <segue reference="nc8-Pk-zR4"/>
