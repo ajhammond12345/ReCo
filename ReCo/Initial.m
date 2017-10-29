@@ -28,23 +28,16 @@
 
 -(void) viewDidAppear:(BOOL)animated {
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
-    NSNumber *firstLogin = [defaults objectForKey:@"first_login"];
     int userType = [self getUserType];
-    if ([firstLogin isEqualToNumber: [NSNumber numberWithInt:2]]) {
-        if ([defaults objectForKey:@"user_id"] != nil) {
-            switch (userType) {
-                case 0: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
-                case 1: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
-                case 2: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
-                default: [self performSegueWithIdentifier:@"toUserType" sender:self];
-            }
-        }
-        else {
-            [self performSegueWithIdentifier:@"toUserType" sender:self];
+    if ([defaults objectForKey:@"user_id"] != nil) {
+        switch (userType) {
+            case 0: [self performSegueWithIdentifier:@"toManagerHome" sender:self];
+            case 1: [self performSegueWithIdentifier:@"toRenterHome" sender:self];
+            case 2: [self performSegueWithIdentifier:@"toRenterNoProperty" sender:self];
+            default: [self performSegueWithIdentifier:@"toUserType" sender:self];
         }
     }
     else {
-        [defaults setObject:[NSNumber numberWithInt:2] forKey:@"first_login"];
         [self performSegueWithIdentifier:@"toUserType" sender:self];
     }
 }

@@ -669,6 +669,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Reu-Vr-EqT">
                                 <rect key="frame" x="16" y="28" width="55" height="30"/>
                                 <state key="normal" title="Log Out"/>
+                                <connections>
+                                    <action selector="logout:" destination="qyH-Y3-q0k" eventType="touchUpInside" id="gAx-ci-jCT"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.61529477700000001" green="1" blue="0.71584581759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -700,6 +703,7 @@
                         <segue destination="h44-ZF-WjY" kind="presentation" identifier="toCreateProperty" id="ldb-3Q-RBA"/>
                         <segue destination="GlT-Vt-oj1" kind="presentation" identifier="toPropertyView" id="vLw-IY-cwP"/>
                         <segue destination="j14-dZ-fwI" kind="presentation" identifier="toManagerExpenses" id="JDY-oo-Q3v"/>
+                        <segue destination="t0X-GI-Dse" kind="presentation" identifier="logout" id="xJl-0H-QHs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yw9-yR-Fzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1571,10 +1575,11 @@
         <segue reference="UCD-6U-jdD"/>
         <segue reference="JDY-oo-Q3v"/>
         <segue reference="vLw-IY-cwP"/>
-        <segue reference="8C8-4g-4g2"/>
+        <segue reference="2Ol-PF-a8h"/>
         <segue reference="K38-BR-3Ly"/>
         <segue reference="pxu-nP-1wa"/>
         <segue reference="WKe-Or-Bgs"/>
         <segue reference="feA-52-TuZ"/>
+        <segue reference="xJl-0H-QHs"/>
     </inferredMetricsTieBreakers>
 </document>
