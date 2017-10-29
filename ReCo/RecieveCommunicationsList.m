@@ -79,8 +79,12 @@
     if (_notificationsList != nil) {
         [notificationTable reloadData];
     }
-    NSString *jsonUrlString = [NSString stringWithFormat:@"https://localhost:3001/Notifications.json"];
-    NSURL *url = [NSURL URLWithString:jsonUrlString];
+    NSURL *url = [NSURL URLWithString:@"https://quiet-crag-59586.herokuapp.com/Notifications.json"];
+    //testing url
+    //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/Notifications.json"];
+   
+    
+
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];

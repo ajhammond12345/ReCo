@@ -9,13 +9,14 @@
 #import "PastContracts.h"
 #import "ContractCells.h"
 
-@interface PastContracts () <UITableViewDelegate, UITableViewDataSource>
+@interface PastContracts () <UITableViewDelegate, UITableViewDataSource, NSURLSessionDelegate>
 
 @end
 
 @implementation PastContracts
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
     ContractCells *cell = (ContractCells *)[tableView dequeueReusableCellWithIdentifier:@"PastContractCell" forIndexPath:indexPath];
     cell.contract = [_contractList objectAtIndex:indexPath.row];
     //updates the views in the cell
@@ -28,7 +29,7 @@
     return _contractList.count;
 }
 
--(IBAction)back:(id)sender;{
+-(IBAction)back:(id)sender{
     if (_isManager) {
         [self performSegueWithIdentifier:@"toManagerHome" sender:self];
     } else {
@@ -44,8 +45,11 @@
     if (_contractList != nil) {
         [contractTable reloadData];
     }
-    NSString *jsonUrlString = [NSString stringWithFormat:@"https://localhost:3001/Contracts.json"];
-    NSURL *url = [NSURL URLWithString:jsonUrlString];
+    NSURL *url = [NSURL URLWithString:@"https://quiet-crag-59586.herokuapp.com/Contracts.json"];
+    //testing url
+    //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/Contracts.json"];
+   
+
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];

@@ -16,9 +16,13 @@
 
 @implementation ManagerExpenses
 
+
+
 -(void)toSpecificPropertyExpenses{
     [self performSegueWithIdentifier:@"toSpecificPropertyExpenses" sender:self];
 }
+
+
 -(IBAction)back:(id)sender{
     [self performSegueWithIdentifier:@"toManagerHome" sender:self];
 }
@@ -34,9 +38,12 @@
     //-- Make URL request with server to load all of the items
     if (_expensesList != nil) {
         [expensesTable reloadData];
-        }
-    NSString *jsonUrlString = [NSString stringWithFormat:@"https://localhost:3001/expenses.json"];
-    NSURL *url = [NSURL URLWithString:jsonUrlString];
+    }
+    NSURL *url = [NSURL URLWithString:@"https://quiet-crag-59586.herokuapp.com/expenses.json"];
+    //testing url
+    //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/expenses.json"];
+  
+
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];
@@ -70,19 +77,20 @@
     //NSLog(@"Result (Length: %zd) = %@",_result.count, _result);
     //this interprets the data received a creates a bunch of items from it
     NSMutableArray *tmpExpensesArray = [[NSMutableArray alloc] init];
+    
+    
     for (int i = 0; i < _result.count; i++) {
         NSDictionary *tmpDic = [_result objectAtIndex:i];
         //NSLog(@"Dictionary %@", tmpDic);
         Expense *loadExpenses = [self loadExpenseFromDictionary:tmpDic];
         //[self loadItemImage:loadItem];
         [tmpExpensesArray addObject:loadExpenses];
-        }
+    }
    
     //if data receieved it saves the interpreted data to the local array
     if (tmpExpensesArray != nil) {
         _expensesList = tmpExpensesArray;
-        }
-
+    }
     else {
         //if no data received it provides this alert
         UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"No Connection\n" message:@"Could not load items" preferredStyle:UIAlertControllerStyleAlert];
