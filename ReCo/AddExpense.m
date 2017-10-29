@@ -118,9 +118,11 @@
         NSData *jsonData = [NSJSONSerialization dataWithJSONObject:tmpDic options:NSJSONWritingPrettyPrinted error:&error];
         //logs the data to check if it is created successfully
         NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
-        
         //production url
-        NSURL *url = [NSURL URLWithString:@"https://localhost:3001/Expenses.json"];
+        NSURL *url = [NSURL URLWithString:@"https://quiet-crag-59586.herokuapp.com/Expenses.json"];
+        //testing url
+        //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/Expenses.json"];
+
         
         //creates a URL request
         NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];

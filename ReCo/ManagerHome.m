@@ -77,7 +77,11 @@
     if (_propertyList != nil) {
         [propertyTable reloadData];
     }
-    NSString *jsonUrlString = [NSString stringWithFormat:@"https://localhost:3001/rentals.json"];
+    //production url
+    NSURL *url = [NSURL URLWithString:@"https://quiet-crag-59586.herokuapp.com/rentals.json"];
+    //testing url
+    //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/rentals.json"];
+  
     NSURL *url = [NSURL URLWithString:jsonUrlString];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];

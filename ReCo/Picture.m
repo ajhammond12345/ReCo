@@ -23,11 +23,11 @@
     NSLog(@"%@", [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding]);
     
     //creates url for the request
-    
     //production url
-    NSURL *url = [NSURL URLWithString:@"https://localhost:3001/pictures.json"];
+    NSURL *url = [NSURL URLWithString:@"https://quiet-crag-59586.herokuapp.com/pictures.json"];
     //testing url
-    //NSURL *url = [NSURL URLWithString:@"http://localhost:3001/items.json"];
+    //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/pictures.json"];
+   
     
     //creates a URL request
     NSMutableURLRequest *uploadRequest = [NSMutableURLRequest requestWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:60.0];
