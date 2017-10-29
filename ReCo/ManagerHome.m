@@ -16,6 +16,12 @@
 
 @implementation ManagerHome
 
+-(IBAction)logout:(id)sender {
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    [defaults setObject:[NSString stringWithFormat:@"%i", 3] forKey:@"user_type"];
+    [self performSegueWithIdentifier:@"logout" sender:self];
+}
+
 -(IBAction)addProperty:(id)sender{
     [self performSegueWithIdentifier:@"toCreateProperty" sender:self];
 
@@ -82,7 +88,6 @@
     //testing url
     //NSURL *url = [NSURL URLWithString:@"https://localhost:3001/rentals.json"];
   
-    NSURL *url = [NSURL URLWithString:jsonUrlString];
     NSURLSessionConfiguration* config = [NSURLSessionConfiguration defaultSessionConfiguration];
     NSURLSession *session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:[NSOperationQueue mainQueue]];
     NSURLSessionDataTask *dataTask = [session dataTaskWithURL:url];
